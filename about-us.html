@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Display -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Identity -->
+  <title>Balubaid Group of Companies</title>
+  <meta name="description"
+    content="Established in 1952, Balubaid Group of Companies is a modern, diversified holding company whose operating activities span eight sectors in the Saudi Arabia." />
+  <meta name="author" content="Codings" />
+  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
+
+  <!-- Vendor Style Sheet -->
+  <link rel="stylesheet" href="assets/css/vendor/preloader.min.css" />
+  <link rel="stylesheet" href="assets/css/vendor/font-family.min.css" />
+  <link rel="stylesheet" href="assets/css/vendor/font-awesome.min.css" />
+  <link rel="stylesheet" href="assets/css/vendor/menu-engine.min.css" />
+  <link rel="stylesheet" href="assets/css/vendor/menu-grid.min.css" />
+  <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/vendor/swiper.min.css" />
+  <link rel="stylesheet" href="assets/css/vendor/dynamic-slider.min.css" />
+  <link rel="stylesheet" href="assets/css/vendor/bricklayer.min.css" />
+  <link rel="stylesheet" href="assets/css/vendor/lightbox.min.css" />
+  <link rel="stylesheet" href="assets/css/vendor/aos.min.css" />
+
+  <!-- Main Style Sheet -->
+  <link rel="stylesheet" href="assets/css/theme.css" />
+  <link rel="stylesheet" href="assets/css/core.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+
+  <!-- Add CSS via jsdilvr CDN -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/gh/ycodetech/horizontal-timeline-2.0@2/css/horizontal_timeline.2.0.min.css">
+  <style>
+    @font-face {
+      font-family: 'Bahij_font';
+      src: url('./assets/fonts/Bahij_TheSansArabic-Bold.ttf');
+    }
+
+    @font-face {
+      font-family: 'Dax_light';
+      src: url('./assets/fonts/Dax-Light.otf');
+    }
+
+    @font-face {
+      font-family: 'Dax_regular';
+      src: url('./assets/fonts/Dax\ Regular.ttf');
+    }
+
+    @font-face {
+      font-family: 'Dax_medium';
+      src: url('./assets/fonts/Dax-Medium.otf');
+    }
+
+    @font-face {
+      font-family: 'Lexend_light';
+      src: url('./assets/fonts/Lexend-Light.ttf');
+    }
+
+    @font-face {
+      font-family: 'Lexend_bold';
+      src: url('./assets/fonts/Lexend-Bold.ttf');
+    }
+
+    :root {
+      --font-bahij: 'Bahij_font';
+      --font-dax-light: 'Dax_light';
+      --font-dax-regular: 'Dax_regular';
+      --font-dax-medium: 'Dax_medium';
+      --font-lexend-light: 'Lexend_light';
+      --font-lexend-bold: 'Lexend_bold';
+    }
+
+    .custom-nav .custom-nav-link {
+      font-family: 'Dax_medium', sans-serif;
+    }
+
+    @media (min-width: 992px) and (max-width: 2590px) {
+      #navbarSupportedContent {
+        display: flex !important;
+        justify-content: space-around !important;
+      }
+    }
+
+    p {
+      font-family: var(--font-dax-regular);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: var(--font-bahij);
+    }
+
+    a {
+      text-decoration: none !important;
+      /* color: #003463 !important; */
+    }
+
+    .custom-nav {
+      background-color: #fff !important;
+    }
+
+    .custom-nav-link {
+      color: #ad713d !important;
+      padding-top: 25px;
+      margin-left: 10px;
+      margin-right: 10px;
+      /* margin-left: 20px; */
+    }
+
+    .logo-image {
+      /* margin-left: auto;
+            margin-right: auto; */
+      margin-left: 25px;
+    }
+
+    .menu-toggle .new-path::before {
+      background-color: #ba8751 !important;
+    }
+
+    :root .menu-toggle.scheme-1 {
+      --color-1: var(--bs-dark) !important;
+      --color-2: var(--white-color);
+    }
+
+    .horizontal-timeline .events-content .progressBar,
+    .horizontal-timeline .filling-line,
+    .horizontal-timeline .events a.older-event::after,
+    .horizontal-timeline .events a.selected::after {
+      background-color: #003463;
+    }
+
+    .horizontal-timeline .events {
+      background-color: gray !important;
+    }
+
+    .timeline-navigation a:hover {
+      color: #ba8751;
+      border-color: #ba8751;
+    }
+
+    a.fas.fa-3x.fa-pause-circle.pause {
+      display: none;
+    }
+
+    svg {
+      font-family: 'Russo One', sans-serif;
+      width: 100%;
+      margin: 50px auto;
+    }
+
+    svg text {
+      text-transform: uppercase;
+      animation: stroke 5s infinite alternate;
+      stroke-width: 3;
+      stroke: #ad713d !important;
+      font-size: 340px;
+    }
+
+    @keyframes stroke {
+      0% {
+        fill: rgba(72, 138, 20, 0);
+        stroke: #ad713d;
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+        stroke-width: 2;
+      }
+
+      70% {
+        fill: rgba(72, 138, 20, 0);
+        stroke: #ad713d;
+      }
+
+      80% {
+        fill: rgba(72, 138, 20, 0);
+        stroke: #ad713d;
+        stroke-width: 3;
+      }
+
+      100% {
+        fill: #ad713d;
+        stroke: rgba(54, 95, 160, 0);
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 50% 0;
+        stroke-width: 0;
+      }
+    }
+
+    ol>li::before {
+      display: none;
+    }
+
+    .horizontal-timeline .events-content li {
+      background: #ccc0;
+    }
+
+    .color-brown {
+      color: #ba8751;
+    }
+
+    .sub-h4 {
+      width: 70%;
+      margin: auto;
+      margin-top: 1.5rem;
+      color: #003463 !important;
+    }
+
+    .horizontal-timeline .events-content .progressBar {
+      background-color: lightgray;
+      border: 1px dashed #003463;
+    }
+
+    .footer-section {
+      background-color: #003463 !important;
+      height: 90px;
+    }
+
+    .page-footer {
+      display: flex;
+      align-items: center;
+    }
+
+    .page-footer ul {
+      justify-content: center;
+      text-align: center;
+    }
+
+    .page-footer ul li {
+      display: inline-block;
+      margin-right: 15px;
+    }
+
+    /* Make the navbar sticky */
+    .sticky {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Add the animation to the navbar */
+    .animate__fadeInDown {
+      --animate-duration: 0.5s;
+      animation-name: animate__fadeInDown;
+      animation-duration: var(--animate-duration);
+    }
+
+    @keyframes animate__fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+      }
+
+      100% {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    /* header parallax */
+    *,
+    *:before,
+    *:after {
+      box-sizing: border-box;
+    }
+
+    ::-webkit-scrollbar {
+      width: 0;
+    }
+
+    header {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 53, 99, 0.199);
+    }
+
+    header .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+    }
+
+    header .overlay::before {
+      content: "";
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      top: -50%;
+      left: -50%;
+      z-index: -1;
+      background: url("assets/images/Triangles.png") 0 0 no-repeat;
+      transform: rotate(30deg);
+    }
+
+    header .overlay h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+      margin: 0;
+      text-transform: uppercase;
+      text-align: justify;
+      font-size: 1.5rem;
+      text-shadow: 10px -5px rgba(25, 42, 46, 0.04);
+      color: rgb(0, 52, 99);
+      /* mix-blend-mode: overlay; */
+    }
+
+    header .overlay h1 span {
+      padding-top: 0.5em;
+      display: block;
+      letter-spacing: 5px;
+      color: black;
+      font-size: 1rem;
+    }
+
+    header .parallax {
+      position: relative;
+      width: 100%;
+      opacity: 0.7;
+      height: 100%;
+    }
+
+    header .parallax div {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-position: 0 50%;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+
+    header .parallax .one {
+      background-image: url("assets/images/LineLogo-01.svg");
+      background-size: 30%;
+      z-index: 2;
+      background-color: white;
+      background-position: 99% 99%;
+      /* background-attachment: scroll; */
+    }
+
+    .founder {
+      background-image: url('assets/images/founder-bg.jpg');
+      background-size: 100%;
+      height: 80vh;
+      background-position: 100% 30%;
+    }
+
+    .founder-content {
+      width: 40%;
+      margin: 0 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1.founder-head {
+      text-transform: uppercase;
+      color: black;
+      font-weight: 400;
+    }
+
+    p.founder-para {
+      color: black;
+    }
+
+    p.founder-date {
+      text-align: end;
+      color: rgb(0, 52, 99);
+      font-family: var(--font-lexend-bold);
+    }
+
+    .founder-box-shadow {
+      background: white;
+      padding: 2rem;
+      box-shadow: 15px 15px 0px 0px rgba(0, 52, 99, 0.75);
+      -webkit-box-shadow: 15px 15px 0px 0px rgba(0, 52, 99, 0.75);
+      -moz-box-shadow: 15px 15px 0px 0px rgba(0, 52, 99, 0.75);
+    }
+
+    .company-info {
+      padding: 5rem 1rem;
+    }
+
+    .our-mission-box,
+    .our-values-box,
+    .our-vision-box {
+      max-width: 70%;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: whitesmoke;
+      box-shadow: 5px 5px 0px 0px rgba(0, 52, 99, 0.75);
+      -webkit-box-shadow: 5px 5px 0px 0px rgba(0, 52, 99, 0.75);
+      -moz-box-shadow: 5px 5px 0px 0px rgba(0, 52, 99, 0.75);
+    }
+
+    .our-mission-box {
+      box-shadow: -5px 5px 0px 0px rgba(0, 52, 99, 0.75);
+      -webkit-box-shadow: -5px 5px 0px 0px rgba(0, 52, 99, 0.75);
+      -moz-box-shadow: -5px 5px 0px 0px rgba(0, 52, 99, 0.75);
+    }
+
+    .our-mission-box .row,
+    .our-values-box .row,
+    .our-vision-box .row {
+      display: flex;
+      align-items: center;
+    }
+
+    .info-box-text {
+      color: black;
+      font-family: var(--font-dax-regular);
+      font-weight: 500;
+    }
+
+
+    .info-box-head {
+      text-align: end;
+    }
+
+    p.our-text {
+      font-size: 2rem;
+      line-height: 0px;
+      color: black;
+    }
+
+    p.info-head-text {
+      font-size: 3rem;
+      color: #ad713d;
+      font-weight: bold;
+    }
+
+    .company-info-header {
+      max-width: 70%;
+      margin: 0 auto;
+      padding: 1rem 0 1rem 0;
+    }
+
+    .company-info-header p {
+      text-align: center;
+      color: #003463;
+      font-size: 1.5rem;
+      font-weight: bold;
+      font-family: var(--font-dax-medium);
+    }
+
+    .info-section {
+      background-image: url('assets/images/About-bg.jpg');
+      background-repeat: no-repeat;
+    }
+    .slogan-left-bar, .slogan-right-bar {
+    height: 2px;
+    /* background: rgb(225,230,77); */
+    background: linear-gradient(90deg, rgb(173 113 61) 0%, rgb(201 186 99) 20%, rgb(173 113 61) 50%, rgb(205 190 103) 80%, rgb(173 114 61) 100%);
+    width: 20%;
+    display: inline-block;
+    margin: 8px 26px;
+}
+.about-main-heading {
+    font-size: 44px;
+    text-align: left;
+    font-weight: lighter;
+    text-transform: uppercase;
+    line-height: 0.9;
+    font-family: 'Dax_regular', sans-serif;
+    color: black;
+    margin-top: 100px;
+}
+.about-main-heading-two{
+  font-size: 44px;
+    text-align: left;
+    font-weight: lighter;
+    text-transform: uppercase;
+    line-height: 0.9;
+    font-family: 'Dax_regular', sans-serif;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+span.font-weight-bolder {
+    font-weight: bold;
+}
+  </style>
+</head>
+
+<body class="shock-body">
+  <!-- Preloader -->
+  <div id="preloader" class="preloader white" data-delay="0" data-limit="3000">
+    <!-- <img src="assets/images/logo-gradient.svg" class="emblem" alt="Emblem" /> -->
+    <img src="assets/images/logo.png" class="emblem" alt="Emblem" />
+  </div>
+
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light custom-nav">
+    <div class="container-fluid nav-bar">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active custom-nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-nav-link" href="#">Business Sectors</a>
+          </li>
+          <li>
+            <a class="navbar-brand" href="#">
+              <img src="assets/images/logo.png" alt="" width="100px" height="80px" class="logo-image" />
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-nav-link" href="#">News & Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-nav-link" href="#">Careers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-nav-link" href="#">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-nav-link" href="#" style="
+                  color: #003463 !important ;
+                  font-family: 'Bahij_font', 'sans-serif';
+                ">العربية</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main -->
+  <main id="main" class="shock-main bg-color gray-10">
+
+    <!-- header -->
+    <header>
+      <div class="overlay">
+        <div class="parallax">
+          <h1>About Us<span>Balubaid Group of Companies (BGC) is a diversified
+              holding company operating in eight sectors in Saudi
+              Arabia. Established in 1952 Starting as a spare parts
+              trading operation, the company has grown into a
+              multi-business enterprise with interests in automotive
+              retail, industrial and service equipment, transportation,
+              real estate, financial services, manufacturing, and
+              hospitality. BGC is a privately held, family-owned
+              enterprise with a diverse, multinational workforce
+              of over 1000. The company has also been a pioneer
+              in institutionalizing governance practices in the
+              Middle East and continues to expand its activities
+              and corporate culture</span></h1>
+          <div class="one"></div>
+          <div class="two"></div>
+          <div class="three"></div>
+          <div class="four"></div>
+          <div class="five"></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- founder -->
+    <section class="founder">
+      <div class="founder-content">
+        <div class="founder-box-shadow">
+
+          <h1 class="founder-head">
+            BGC Founder
+          </h1>
+
+          <p class="founder-para">
+            "It is my deepest conviction that our success depends on our continuing commitment to the ever-enduring
+            values of integrity, loyalty,
+            fairness, patience and dedication. Our continuous growth, under ever changing business conditions, stems
+            from our willingness to learn
+            and innovate."
+          </p>
+
+          <p class="founder-date">
+            Late SH. Omar Balubaid (1933-2010)
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+
+    <section class="info-section">
+      <div class="col-12 text-center my-4">
+        <div class="slogan-left-bar"></div>
+        <!-- <p class="d-inline-block slogan-text">Balubaid Group</p> -->
+        <h1 class="about-main-heading d-inline-block text-left">
+          Core <span class="font-weight-bolder">Values</span>
+        </h1>
+        <div class="slogan-right-bar"></div>
+      </div>
+      <div class="company-info">
+        <div class="company-info-header">
+          <p>
+            BGC has grown from a one-business company into a multi-disciplinary enterprise!
+          </p>
+        </div>
+
+        <div class="our-vision-box">
+          <div class="row">
+
+            <div class="col">
+              <div class="info-box-text">
+                <p class="text-captalize">
+                  To be market leader in providing high-quality product and services that exceed customers expectations,
+                  in cost effective manner through the efforts of everyone.
+                </p>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="info-box-head">
+                <p class="our-text m-0">
+                  OUR
+                </p>
+                <p class="info-head-text m-0">
+                  VISION
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="our-mission-box">
+          <div class="row">
+
+            <div class="col">
+              <div class="info-box-text">
+                <p class="text-captalize">
+                  <ul>
+                    <li>To increase market share.</li>
+                    <li>To be distinctive.</li>
+                    <li>To be customer focused. </li>
+                    <li>To enhance efficiency.</li>
+                    <li>To promote BGC as an employer of choice.</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="info-box-head">
+                <p class="our-text m-0">
+                  OUR
+                </p>
+                <p class="info-head-text m-0">
+                  MISSION
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="our-values-box">
+          <div class="row">
+
+            <div class="col">
+              <div class="info-box-text">
+                <p class="text-captalize">
+                  <ul>
+                    <li>We maintain a positive attitude for ourselves and our customers.</li>
+                    <li>We rely on the power of teams to achieve organizational goals.</li>
+                    <li>We actively listen, understand and respect through open communication. </li>
+                    <li>We continuously improve in ourselves for a better standard of service.</li>
+                    <li>We identify, plan and engage to continuously achieve positive results.</li>
+                    <li>We identify, plan and engage to continuously achieve positive results</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="info-box-head">
+                <p class="our-text m-0">
+                  OUR
+                </p>
+                <p class="info-head-text m-0">
+                  VALUES
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Card boxed -->
+    <section class="shock-section pt-5 pb-5 bg-color">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center my-4">
+            <div class="slogan-left-bar"></div>
+            <!-- <p class="d-inline-block slogan-text">Balubaid Group</p> -->
+            <h1 class="about-main-heading-two d-inline-block text-left">
+              Our Story & <span class="font-weight-bolder">Heritage</span>
+            </h1>
+            <div class="slogan-right-bar"></div>
+          </div>
+          <div class="col-md-12">
+            <div class="horizontal-timeline" id="horizontal-history-timeline">
+              <div class="events-content">
+                <ol>
+                  <li class="selected" data-horizontal-timeline='{"date": "16/01/1952"}'>
+                    <!-- // Event description here -->
+                    <div class="container">
+                      <div class="row align-items-center">
+                        <div class="col-md-6 text-center">
+                          <svg viewBox="0 0 1320 300">
+                            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                              1952
+                            </text>
+                          </svg>
+                          <h4 class="title color-brown sub-h4">Opening of the
+                            1st Automotive
+                            Spare Parts Shop</h4>
+                        </div>
+                        <div class="col-md-6">
+                          <img src="assets/images/jpg/LuxuryCarts001.jpg" class="img-fluid small-shadow" alt="Office">
+                        </div>
+                      </div>
+                    </div>
+
+                  </li>
+                  <li data-horizontal-timeline='{"date": "23/05/1977"}'>
+                    <div class="container">
+                      <div class="row align-items-center">
+                        <div class="col-md-6 text-center">
+
+                          <svg viewBox="0 0 1320 300">
+                            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                              1977
+                            </text>
+                          </svg>
+                          <h4 class="title color-brown sub-h4">Franchised by
+                            GM for (Pontiac,
+                            GMC & Buick)</h4>
+                        </div>
+                        <div class="col-md-6">
+                          <img src="assets/images/jpg/HijazMakkahDay.jpg" class="img-fluid small-shadow" alt="Office">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li data-horizontal-timeline='{"date": "23/05/1979"}'>
+                    <div class="container">
+                      <div class="row align-items-center">
+                        <div class="col-md-6 text-center">
+
+                          <svg viewBox="0 0 1320 300">
+                            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                              1979
+                            </text>
+                          </svg>
+                          <h4 class="title color-brown sub-h4">Franchised by
+                            GM for (Pontiac,
+                            GMC & Buick)</h4>
+                        </div>
+                        <div class="col-md-6">
+                          <img src="assets/images/jpg/LuxuryCarts001.jpg" class="img-fluid small-shadow" alt="Office">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li data-horizontal-timeline='{"date": "23/05/1984"}'>
+                    <div class="container">
+                      <div class="row align-items-center">
+                        <div class="col-md-6 text-center">
+
+                          <svg viewBox="0 0 1320 300">
+                            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                              1984
+                            </text>
+                          </svg>
+                          <h4 class="title color-brown sub-h4">Franchised by
+                            GM for (Pontiac,
+                            GMC & Buick)</h4>
+                        </div>
+                        <div class="col-md-6">
+                          <img src="assets/images/jpg/franchisedby.jpg" class="img-fluid small-shadow" alt="Office">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li data-horizontal-timeline='{"date": "23/05/1989"}'>
+                    <div class="container">
+                      <div class="row align-items-center">
+                        <div class="col-md-6 text-center">
+
+                          <svg viewBox="0 0 1320 300">
+                            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                              1989
+                            </text>
+                          </svg>
+                          <h4 class="title color-brown sub-h4">Franchised by
+                            GM for (Pontiac,
+                            GMC & Buick)</h4>
+                        </div>
+                        <div class="col-md-6">
+                          <img src="assets/images/jpg/franchisedby.jpg" class="img-fluid small-shadow" alt="Office">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li data-horizontal-timeline='{"date": "23/05/1990"}'>
+                    <div class="container">
+                      <div class="row align-items-center">
+                        <div class="col-md-6 text-center">
+
+                          <svg viewBox="0 0 1320 300">
+                            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                              1990
+                            </text>
+                          </svg>
+                          <h4 class="title color-brown sub-h4">Franchised by
+                            GM for (Pontiac,
+                            GMC & Buick)</h4>
+                        </div>
+                        <div class="col-md-6">
+                          <img src="assets/images/jpg/franchisedby.jpg" class="img-fluid small-shadow" alt="Office">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li data-horizontal-timeline='{"date": "23/05/1995"}'>
+                    <div class="container">
+                      <div class="row align-items-center">
+                        <div class="col-md-6 text-center">
+
+                          <svg viewBox="0 0 1320 300">
+                            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                              1995
+                            </text>
+                          </svg>
+                          <h4 class="title color-brown sub-h4">Franchised by
+                            GM for (Pontiac,
+                            GMC & Buick)</h4>
+                        </div>
+                        <div class="col-md-6">
+                          <img src="assets/images/jpg/franchisedby.jpg" class="img-fluid small-shadow" alt="Office">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li data-horizontal-timeline='{"date": "23/05/1998"}'>
+                    <div class="container">
+                      <div class="row align-items-center">
+                        <div class="col-md-6 text-center">
+
+                          <svg viewBox="0 0 1320 300">
+                            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                              1998
+                            </text>
+                          </svg>
+                          <h4 class="title color-brown sub-h4">Franchised by
+                            GM for (Pontiac,
+                            GMC & Buick)</h4>
+                        </div>
+                        <div class="col-md-6">
+                          <img src="assets/images/jpg/franchisedby.jpg" class="img-fluid small-shadow" alt="Office">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li data-horizontal-timeline='{"date": "23/05/2007"}'>
+                    <div class="container">
+                      <div class="row align-items-center">
+                        <div class="col-md-6 text-center">
+
+                          <svg viewBox="0 0 1320 300">
+                            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                              2007
+                            </text>
+                          </svg>
+                          <h4 class="title color-brown sub-h4">Franchised by
+                            GM for (Pontiac,
+                            GMC & Buick)</h4>
+                        </div>
+                        <div class="col-md-6">
+                          <img src="assets/images/jpg/franchisedby.jpg" class="img-fluid small-shadow" alt="Office">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li data-horizontal-timeline='{"date": "23/05/2008"}'>
+                    <div class="container">
+                      <div class="row align-items-center">
+                        <div class="col-md-6 text-center">
+
+                          <svg viewBox="0 0 1320 300">
+                            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                              2008
+                            </text>
+                          </svg>
+                          <h4 class="title color-brown sub-h4">Franchised by
+                            GM for (Pontiac,
+                            GMC & Buick)</h4>
+                        </div>
+                        <div class="col-md-6">
+                          <img src="assets/images/jpg/franchisedby.jpg" class="img-fluid small-shadow" alt="Office">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li data-horizontal-timeline='{"date": "23/05/2012"}'>
+                    <div class="container">
+                      <div class="row align-items-center">
+                        <div class="col-md-6 text-center">
+
+                          <svg viewBox="0 0 1320 300">
+                            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                              2012
+                            </text>
+                          </svg>
+                          <h4 class="title color-brown sub-h4">Franchised by
+                            GM for (Pontiac,
+                            GMC & Buick)</h4>
+                        </div>
+                        <div class="col-md-6">
+                          <img src="assets/images/jpg/franchisedby.jpg" class="img-fluid small-shadow" alt="Office">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li data-horizontal-timeline='{"date": "23/05/2016"}'>
+                    <div class="container">
+                      <div class="row align-items-center">
+                        <div class="col-md-6 text-center">
+
+                          <svg viewBox="0 0 1320 300">
+                            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                              2016
+                            </text>
+                          </svg>
+                          <h4 class="title color-brown sub-h4">Franchised by
+                            GM for (Pontiac,
+                            GMC & Buick)</h4>
+                        </div>
+                        <div class="col-md-6">
+                          <img src="assets/images/jpg/franchisedby.jpg" class="img-fluid small-shadow" alt="Office">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li data-horizontal-timeline='{"date": "23/05/2018"}'>
+                    <div class="container">
+                      <div class="row align-items-center">
+                        <div class="col-md-6 text-center">
+
+                          <svg viewBox="0 0 1320 300">
+                            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                              2018
+                            </text>
+                          </svg>
+                          <h4 class="title color-brown sub-h4">Franchised by
+                            GM for (Pontiac,
+                            GMC & Buick)</h4>
+                        </div>
+                        <div class="col-md-6">
+                          <img src="assets/images/jpg/franchisedby.jpg" class="img-fluid small-shadow" alt="Office">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li data-horizontal-timeline='{"date": "23/05/2020"}'>
+                    <div class="container">
+                      <div class="row align-items-center">
+                        <div class="col-md-6 text-center">
+
+                          <svg viewBox="0 0 1320 300">
+                            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                              2020
+                            </text>
+                          </svg>
+                          <h4 class="title color-brown sub-h4">Franchised by
+                            GM for (Pontiac,
+                            GMC & Buick)</h4>
+                        </div>
+                        <div class="col-md-6">
+                          <img src="assets/images/jpg/franchisedby.jpg" class="img-fluid small-shadow" alt="Office">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li data-horizontal-timeline='{"date": "23/05/2021"}'>
+                    <div class="container">
+                      <div class="row align-items-center">
+                        <div class="col-md-6 text-center">
+
+                          <svg viewBox="0 0 1320 300">
+                            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                              2021
+                            </text>
+                          </svg>
+                          <h4 class="title color-brown sub-h4">Franchised by
+                            GM for (Pontiac,
+                            GMC & Buick)</h4>
+                        </div>
+                        <div class="col-md-6">
+                          <img src="assets/images/jpg/franchisedby.jpg" class="img-fluid small-shadow" alt="Office">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li data-horizontal-timeline='{"date": "23/05/2022"}'>
+                    <div class="container">
+                      <div class="row align-items-center">
+                        <div class="col-md-6 text-center">
+
+                          <svg viewBox="0 0 1320 300">
+                            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                              2022
+                            </text>
+                          </svg>
+                          <h4 class="title color-brown sub-h4">Franchised by
+                            GM for <br /> (Pontiac,
+                            GMC & Buick)</h4>
+                        </div>
+                        <div class="col-md-6">
+                          <img src="assets/images/jpg/franchisedby.jpg" class="img-fluid small-shadow" alt="Office">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scroll to Top -->
+  <div class="side-widget to-right invert-color mix-blend-difference">
+    <div class="item align-v-bottom">
+      <a href="#" class="link hover-up">
+        <span class="widget float-icon">
+          <i class="fa-solid fa-arrow-up-long icon"></i>
+        </span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <section class="footer-section page-footer">
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+          <div class="phone-num text-light">
+            <span style="color: #ad713d">T</span>: +966 12 6404444
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <ul class="ps-0 mb-0">
+            <li>
+              <img src="assets/images/facebook.png" width="30px" height="30px" />
+            </li>
+            <li>
+              <img src="assets/images/twitter.png" width="30px" height="30px" />
+            </li>
+            <li>
+              <img src="assets/images/linkedin.png" width="30px" height="30px" />
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+          <div class="email-address text-light">
+            <span style="color: #ad713d">M</span>: info@balubaid.com
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vendor JavaScript -->
+  <script src="assets/js/vendor/jquery.min.js"></script>
+  <script src="assets/js/vendor/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/js/vendor/preloader.min.js"></script>
+  <script src="assets/js/vendor/inview.min.js"></script>
+  <script src="assets/js/vendor/menu-engine.min.js"></script>
+  <script src="assets/js/vendor/menu-grid.min.js"></script>
+  <script src="assets/js/vendor/bootstrap.min.js"></script>
+  <script src="assets/js/vendor/swiper.min.js"></script>
+  <script src="assets/js/vendor/anime.min.js"></script>
+  <script src="assets/js/vendor/dynamic-slider.min.js"></script>
+  <script src="assets/js/vendor/shuffle.min.js"></script>
+  <script src="assets/js/vendor/stickybits.min.js"></script>
+  <script src="assets/js/vendor/bricklayer.min.js"></script>
+  <script src="assets/js/vendor/lightbox.min.js"></script>
+  <script src="assets/js/vendor/typed.min.js"></script>
+  <script src="assets/js/vendor/progressbar.min.js"></script>
+  <script src="assets/js/vendor/map-styles.min.js"></script>
+  <script src="assets/js/vendor/magnetic-effect.min.js"></script>
+  <script src="assets/js/vendor/gsap.min.js"></script>
+  <script src="assets/js/vendor/aos.min.js"></script>
+  <script src="assets/js/vendor/lax.min.js"></script>
+  <script src="assets/js/vendor/cursor-effect.min.js"></script>
+
+  <!-- Main JavaScript -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Add jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+  <!-- Add JS via jsdilvr CDN -->
+  <script
+    src="https://cdn.jsdelivr.net/gh/ycodetech/horizontal-timeline-2.0@2/JavaScript/horizontal_timeline.2.0.min.js">
+  </script>
+  <script>
+    $('#horizontal-history-timeline').horizontalTimeline({
+      prev: "arrow-left",
+      dateDisplay: "year", // dateTime, date, time, dayMonth, monthYear, year
+      dateOrder: "normal", // normal, reverse
+
+      autoplay: true,
+      autoplaySpeed: 8,
+      autoplayPause_onHover: false,
+      useNavBtns: false,
+      useScrollBtns: false,
+      useTouchSwipe: true,
+    });
+  </script>
+
+  <script>
+    // Get the navbar element
+    const navbar = document.querySelector('.custom-nav');
+
+    // Add an event listener to the window object to detect scrolling
+    window.addEventListener('scroll', () => {
+      // Check if the scroll position is greater than or equal to 200px
+      if (window.scrollY >= 0) {
+        // Add the "sticky" and "animate__fadeInDown" classes to the navbar
+        navbar.classList.add('sticky', 'animate__fadeInDown');
+      } else {
+        // Remove the "sticky" and "animate__fadeInDown" classes from the navbar
+        navbar.classList.remove('sticky', 'animate__fadeInDown');
+      }
+    });
+
+
+
+    // for heading
+
+    $(window).scroll(function () {
+      const
+        a = $(this).scrollTop(),
+        b = 800;
+      $("h1").css({
+        backgroundPosition: "center " + a / 2 + "px"
+      });
+      $(".parallax").css({
+        top: a / 1.6 + "px",
+      });
+    });
+
+    // parallax scrolling
+
+    document.addEventListener("scroll", () => {
+      const
+        top = window.pageYOffset,
+        one = document.querySelector(".one"),
+        two = document.querySelector(".two"),
+        three = document.querySelector(".three"),
+        four = document.querySelector(".four"),
+        five = document.querySelector(".five");
+
+      one.style.bottom = -(top * 0.1) + "px";
+      two.style.bottom = -(top * 0.2) + "px";
+      three.style.bottom = -(top * 0.3) + "px";
+      four.style.bottom = -(top * 0.4) + "px";
+      five.style.bottom = -(top * 0.5) + "px";
+    });
+
+    /*
+    // mouse dependency
+
+    const currentX = '';
+    const currentY = '';
+    const movementConstant = 0.015;
+    $(document).mousemove(function(e) {
+      if (currentX == '') currentX = e.pageX;
+      const xdiff = e.pageX - currentX;
+      currentX = e.pageX;
+      if (currentY == '') currentY = e.pageY;
+      const ydiff = e.pageY - currentY;
+      currentY = e.pageY;
+    $('.parallax div').each(function(i, el) {
+        const movement = (i + 1) * (xdiff * movementConstant);
+        const movementy = (i + 1) * (ydiff * movementConstant);
+        const newX = $(el).position().left + movement;
+        const newY = $(el).position().top + movementy;
+        $(el).css('left', newX + 'px');
+        $(el).css('top', newY + 'px');
+      });
+    });
+    */
+  </script>
+</body>
+
+</html>

@@ -1,691 +1,1643 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
-    <!-- Bootstrap CSS -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    /> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="custom.css" />
+    <link rel="stylesheet" href="utils.css" />
     <link
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles/custom.css" />
-    <link rel="stylesheet" href="styles/utils.css" />
-    <title>Alpago Companies</title>
+    <style>
+      @font-face {
+        font-family: 'Bahij_font';
+        src: url('./assets/fonts/Bahij_TheSansArabic-Bold.ttf');
+      }
+
+      @font-face {
+        font-family: 'Dax_light';
+        src: url('./assets/fonts/Dax-Light.otf');
+      }
+
+      @font-face {
+        font-family: 'Dax_regular';
+        src: url('./assets/fonts/Dax\ Regular.ttf');
+      }
+
+      @font-face {
+        font-family: 'Dax_medium';
+        src: url('./assets/fonts/Dax-Medium.otf');
+      }
+
+      @font-face {
+        font-family: 'Lexend_light';
+        src: url('./assets/fonts/Lexend-Light.ttf');
+      }
+
+      @font-face {
+        font-family: 'Lexend_bold';
+        src: url('./assets/fonts/Lexend-Bold.ttf');
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: 'Dax_regular', sans-serif;
+      }
+      .custom-nav .custom-nav-link {
+        font-family: 'Dax_medium', sans-serif;
+      }
+
+      @media (min-width: 992px) and (max-width: 2590px) {
+        #navbarSupportedContent {
+          display: flex !important;
+          justify-content: space-around !important;
+        }
+      }
+
+      a {
+        text-decoration: none !important;
+        /* color: #003463 !important; */
+      }
+
+      .custom-nav {
+        background-color: #fff !important;
+      }
+
+      .custom-nav-link {
+        color: #ad713d !important;
+        padding-top: 25px;
+        margin-left: 10px;
+        margin-right: 10px;
+        /* margin-left: 20px; */
+      }
+
+      .logo-image {
+        /* margin-left: auto;
+            margin-right: auto; */
+        margin-left: 25px;
+      }
+
+      .carousel-indicators.custom-carousel-indicator {
+        left: unset !important;
+        margin-right: 11% !important;
+        /* bottom: 50px !important; */
+        bottom: 75px !important;
+      }
+      .carousel-indicators.custom-carousel-indicator li {
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+        background-color: #ad713d;
+      }
+
+      .custom-carousel-indicator button,
+      .custom-carousel-indicator1 button {
+        width: 15px !important;
+        height: 15px !important;
+        border-radius: 50% !important;
+        margin-right: 10px !important;
+      }
+
+      button.btn-indicator.active,
+      button.btn-indicator1.active {
+        background-color: #ad713d !important;
+      }
+
+      button.btn-indicator,
+      button.btn-indicator1 {
+        opacity: unset !important;
+      }
+
+      .carousel-control-prev.custom-carousel-control-prev {
+        right: 215px !important;
+        left: unset !important;
+      }
+      button.carousel-control-next.custom-carousel-control-next {
+        right: 155px;
+      }
+
+      .carousel-control-next.custom-carousel-control-next,
+      .carousel-control-prev.custom-carousel-control-prev {
+        bottom: 50px !important;
+        width: 5% !important;
+        top: unset !important;
+      }
+
+      .btn-indicator1 {
+        margin-top: 8px !important;
+      }
+
+      .custom-carousel-indicator1 {
+        bottom: 15px !important;
+      }
+
+      .carousel-control-next,
+      .carousel-control-prev {
+        opacity: unset !important;
+      }
+
+      .custom-arrow-left,
+      .custom-arrow-right {
+        opacity: unset !important;
+        color: #fff;
+        font-size: 30px !important;
+      }
+
+      .welcome-bg-img {
+        background-image: url('./images/welcome-bg.png');
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+      }
+
+      .title-card {
+        padding-bottom: 20px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      .title-card h4 {
+        color: #ad713d !important;
+        font-size: 30px;
+        line-height: 2.5rem;
+        word-spacing: 5px;
+        font-family: 'Dax_medium', sans-serif;
+      }
+
+      .para-card {
+        /* width: 475px;  */
+        padding-bottom: 25px;
+        font-size: 18px;
+        letter-spacing: 1px;
+        color: #000;
+        font-family: 'Lexend_light', sans-serif;
+      }
+
+      .card-btn-read-more {
+        border-color: #ad713d !important;
+        border-radius: 0 !important;
+        padding: 10px 35px 10px 35px;
+        color: #ad713d !important;
+        font-family: 'Lexend_bold', sans-serif;
+      }
+
+      .card-btn-read-more:hover {
+        background-color: #003463 !important;
+        border-color: #003463 !important;
+        color: #ffffff !important;
+      }
+
+      .first-card-content {
+        border-radius: 0 !important;
+        /* margin-top: 1px; */
+        border: 0 !important;
+      }
+
+      .card-image {
+        border-radius: 0 !important;
+        border: 0 !important;
+      }
+
+      .pq-fancy-box.pq-style-3.design-2 .first-card-content h4 {
+        color: #ad713d !important;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 30px;
+        font-family: 'Dax_medium', sans-serif;
+      }
+
+      .pq-fancy-box.pq-style-3 .first-card-content h4 {
+        color: #003463 !important;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 30px;
+        font-family: 'Dax_medium', sans-serif;
+      }
+
+      .first-card-content p {
+        /* width: 500px; */
+        letter-spacing: 1px;
+        font-family: 'Lexend_light', sans-serif;
+        color: #000;
+        font-size: 16px;
+      }
+
+      .pq-fancy-box.pq-style-3 .btn-read-more {
+        border-color: #003463 !important;
+        border-radius: 0 !important;
+        padding: 10px 35px 10px 35px;
+        color: #003463 !important;
+        border-color: #003463;
+        font-family: 'Lexend_bold';
+      }
+
+      .pq-fancy-box.pq-style-3.design-2 .btn-read-more {
+        border-color: #ad713d !important;
+        border-radius: 0 !important;
+        padding: 10px 35px 10px 35px;
+        color: #ad713d !important;
+        border-color: #ad713d !important;
+        font-family: 'Lexend_bold';
+      }
+
+      .pq-fancy-box.pq-style-3.design-2 .btn-read-more a {
+        color: #ad713d;
+      }
+
+      .pq-fancy-box.pq-style-3 .btn-read-more a {
+        color: #003463;
+      }
+
+      .second-row {
+        display: flex;
+        flex-direction: row-reverse;
+      }
+
+      .page-footer {
+        display: flex;
+        align-items: center;
+      }
+
+      .page-footer ul {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .page-footer ul li {
+        display: inline-block;
+        margin-right: 15px;
+      }
+
+      .footer-section {
+        background-color: #003463 !important;
+        height: 90px;
+      }
+
+      .phone-num,
+      .email-address {
+        font-size: 16px;
+        font-family: 'Lexend_light', sans-serif;
+        text-align: center;
+      }
+
+      .first-left-carousel {
+        display: inline-block;
+        width: 2.3em;
+        height: 2.3em;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        margin-right: 1.5em;
+      }
+
+      .first-left-carousel:after {
+        content: '';
+        display: inline-block;
+        margin-top: 0.7em;
+        margin-left: 0.4em;
+        width: 0.7em;
+        height: 0.7em;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        -moz-transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+      }
+
+      .first-right-carousel {
+        display: inline-block;
+        width: 2.3em;
+        height: 2.3em;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        margin-right: 1.5em;
+      }
+
+      .first-right-carousel:after {
+        content: '';
+        display: inline-block;
+        margin-top: 0.7em;
+        margin-right: 0.5em;
+        width: 0.7em;
+        height: 0.7em;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        -moz-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+
+      .carousel-indicators button {
+        opacity: unset !important;
+      }
+
+      video.video-carousel {
+        height: 100vh;
+        width: 100%;
+        object-fit: fill;
+        /* position: absolute; */
+      }
+
+      .image-cards {
+        width: 100%;
+        height: 550px;
+      }
+
+      .custom-card {
+        width: 500px;
+        height: 500px;
+        display: block;
+        background-size: cover;
+        float: left;
+        border-radius: 0;
+        position: relative;
+        overflow: hidden;
+        background-position: center;
+        border-color: transparent;
+      }
+
+      .bounce-image {
+        position: absolute;
+        bottom: 0;
+        width: 120px;
+        right: 0;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+        z-index: 1;
+      }
+
+      .top-right {
+        position: absolute;
+        top: 0;
+        width: 120px;
+        right: 0;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+        z-index: 1;
+      }
+
+      .custom-card:hover .bounce-image,
+      .custom-card:hover .top-right {
+        opacity: 1;
+      }
+
+      .custom-card:hover {
+        /* transform: scale(1.03);
+            transition: transform 0.2s ease-in-out; */
+        z-index: 2;
+      }
+
+      .card.custom-card {
+        background-color: transparent !important;
+      }
+
+      .card.custom-card {
+        position: relative;
+      }
+
+      .sector_heading {
+        color: #ad713d !important;
+        letter-spacing: 1px;
+        word-spacing: 2px;
+        font-family: 'Dax_medium', sans-serif;
+      }
+
+      .sector_heading h1 {
+        font-size: 55px;
+      }
+      /* media queries */
+
+      @media (max-width: 1199px) {
+        .first-card-content p {
+          width: unset !important;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .footer-section {
+          height: 150px !important;
+        }
+        .email-address,
+        .phone-num {
+          text-align: center !important;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          padding-top: 20px;
+          padding-bottom: 20px;
+        }
+        .carousel-indicators.custom-carousel-indicator {
+          left: 0 !important;
+        }
+        .carousel-control-next.custom-carousel-control-next,
+        .carousel-control-prev.custom-carousel-control-prev {
+          display: none !important;
+        }
+      }
+      .brown-text {
+        color: #ad713d !important;
+      }
+      .text-justify {
+        text-align: justify !important;
+      }
+      p {
+        font-family: 'Lexend_light';
+      }
+      .triangles-div {
+        filter: grayscale(100);
+        opacity: 0.3;
+        float: right;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+      }
+      .triangles-div-left {
+        transform: scaleX(-1);
+        filter: grayscale(100);
+        opacity: 0.3;
+        float: right;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+      }
+      /* .bg-triangle {
+        background-image: url(images/Triangles-side.png);
+        background-repeat: no-repeat;
+        background-size: 15%;
+        background-position-x: right;
+      } */
+      .bg-triangle-left,
+      .bg-triangle-right {
+        position: relative;
+      }
+
+      .bg-triangle-right::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.1;
+        background-image: url(images/Triangles-side.png);
+        background-repeat: no-repeat;
+        background-size: 35%;
+        background-position-x: right;
+      }
+      .bg-triangle-left::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background-image: url(images/Triangles-side.png);
+        background-repeat: no-repeat;
+        background-size: 35%;
+        background-position-x: left;
+        /* transform: scaleY(-1); */
+      }
+      .invert-color {
+        filter: brightness(1) invert(1);
+        width: 100%;
+        display: block;
+      }
+    </style>
   </head>
+
   <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-11 col-sm-11 col-xs-10 px-0">
-          <!--First Div-->
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-12 text-center mt-50">
-                <h1 class="about-main-heading d-inline-block text-left">
-                  Our<br /><span class="font-weight-bolder">Companies</span>
-                </h1>
-              </div>
-              <div class="col-12 text-center my-4">
-                <div class="slogan-left-bar"></div>
-                <p class="d-inline-block slogan-text">Alpago Group</p>
-                <div class="slogan-right-bar"></div>
-              </div>
-              <div class="col-12 text-center my-4">
-                <p class="fs-26 px-5">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                  diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                  aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-                  nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-                  aliquip ex ea commodo consequat. Duis autem vel eum iriure
-                  dolor in hendrerit in vulputate velit esse molestie consequat,
-                  vel illum dolore eu feugiat nulla facilisis at vero eros et
-                  accumsan et iusto odio dignissim qui blandit praesent luptatum
-                  zzril delenit augue duis dolore te feugait nulla facilisi.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!--First Div End-->
-          <!--Second Div-->
-          <div class="container-fluid">
-            <!--First Motors-->
-            <div class="row">
-              <div class="col-9 pl-0">
-                <div>
-                  <div
-                    id="FirstMotors"
-                    class="carousel slide"
-                    data-ride="carousel"
-                  >
-                    <ol class="carousel-indicators">
-                      <li
-                        data-target="#FirstMotors"
-                        data-slide-to="0"
-                        class="active"
-                      ></li>
-                      <li data-target="#FirstMotors" data-slide-to="1"></li>
-                      <li data-target="#FirstMotors" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img
-                          src="img/first-motors-one.png"
-                          class="d-block w-100 h-680"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="carousel-item">
-                        <img
-                          src="img/first-motors-two.png"
-                          class="d-block w-100 h-680"
-                          alt="..."
-                        />
-                      </div>
-                    </div>
-                    <a
-                      class="
-                        carousel-control-prev carousel-control-prev-custom
-                        gradient-border
-                      "
-                      href="#FirstMotors"
-                      role="button"
-                      data-slide="prev"
-                    >
-                      <!-- <span
-                        class="carousel-control-prev-icon"
-                        aria-hidden="true"
-                      ></span> -->
-                      <i
-                        class="
-                          fa-chevron-left
-                          fas
-                          font-weight-bolder
-                          fs-22
-                          gradient-color
-                        "
-                      ></i>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                    <a
-                      class="
-                        carousel-control-next carousel-control-next-custom
-                        gradient-border
-                      "
-                      href="#FirstMotors"
-                      role="button"
-                      data-slide="next"
-                    >
-                      <!-- <span
-                        class="carousel-control-next-icon"
-                        aria-hidden="true"
-                      ></span> -->
-                      <i
-                        class="
-                          fa-chevron-right
-                          fas
-                          font-weight-bolder
-                          fs-22
-                          gradient-color
-                        "
-                      ></i>
-                      <span class="sr-only">Next</span>
-                    </a>
-                  </div>
-                </div>
-                <div class="company-info-box-right text-center p-4">
-                  <img
-                    src="img/first-motors.png"
-                    class="img-fluid mb-4"
-                    alt="First Motors"
-                  />
-                  <p class="text-white fs-20 text-justify">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                    quis nostrud exerci tation ullamcorper suscipit lobortis
-                    nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-                    iriure dolor in hendrerit in vulputate velit esse molestie
-                    consequat, vel illum dolore eu commodo consequat. Duis autem
-                    vel eum iriure dolor in hendrerit in vulputate velit esse
-                    molestie consequat, vel illum dolore eu
-                  </p>
-                  <div class="company-info-box-social">
-                    <a href="#" class="text-white">
-                      <i class="fab fa-facebook-f fs-26 m-4"></i>
-                    </a>
-                    <a href="#" class="text-white">
-                      <i class="fab fa-instagram fs-26 m-4"></i>
-                    </a>
-                    <a href="#" class="text-white">
-                      <i class="fab fa-linkedin-in fs-26 m-4"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--First Motors End-->
-
-            <!--Alpago Properties-->
-            <div class="row mt-150">
-              <div class="col-3"></div>
-              <div class="col-9 pr-0">
-                <div>
-                  <div
-                    id="AlpagoProperties"
-                    class="carousel slide"
-                    data-ride="carousel"
-                  >
-                    <ol class="carousel-indicators">
-                      <li
-                        data-target="#AlpagoProperties"
-                        data-slide-to="0"
-                        class="active"
-                      ></li>
-                      <li
-                        data-target="#AlpagoProperties"
-                        data-slide-to="1"
-                      ></li>
-                      <li
-                        data-target="#AlpagoProperties"
-                        data-slide-to="2"
-                      ></li>
-                    </ol>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img
-                          src="img/properties-one.png"
-                          class="d-block w-100 h-680"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="carousel-item">
-                        <img
-                          src="img/properties-two.png"
-                          class="d-block w-100 h-680"
-                          alt="..."
-                        />
-                      </div>
-                    </div>
-                    <a
-                      class="
-                        carousel-control-prev carousel-control-prev-custom-right
-                        gradient-border
-                      "
-                      href="#AlpagoProperties"
-                      role="button"
-                      data-slide="prev"
-                    >
-                      <i
-                        class="
-                          fa-chevron-left
-                          fas
-                          font-weight-bolder
-                          fs-22
-                          gradient-color
-                        "
-                      ></i>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                    <a
-                      class="
-                        carousel-control-next carousel-control-next-custom-right
-                        gradient-border
-                      "
-                      href="#AlpagoProperties"
-                      role="button"
-                      data-slide="next"
-                    >
-                      <i
-                        class="
-                          fa-chevron-right
-                          fas
-                          font-weight-bolder
-                          fs-22
-                          gradient-color
-                        "
-                      ></i>
-                      <span class="sr-only">Next</span>
-                    </a>
-                  </div>
-                </div>
-                <div class="company-info-box-left text-center p-4">
-                  <img
-                    src="img/alpago-properties.png"
-                    class="img-fluid mb-4 w-150"
-                    alt="Alpago Properties"
-                  />
-                  <p class="text-white fs-20 text-justify">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                    quis nostrud exerci tation ullamcorper suscipit lobortis
-                    nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-                    iriure dolor in hendrerit in vulputate velit esse molestie
-                    consequat
-                  </p>
-                  <div class="company-info-box-social">
-                    <a href="#" class="text-white">
-                      <i class="fab fa-facebook-f fs-26 m-4"></i>
-                    </a>
-                    <a href="#" class="text-white">
-                      <i class="fab fa-instagram fs-26 m-4"></i>
-                    </a>
-                    <a href="#" class="text-white">
-                      <i class="fab fa-linkedin-in fs-26 m-4"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--Alpago Properties End-->
-
-            <!--Alpago Homes-->
-            <div class="row mt-150">
-              <div class="col-9 pl-0">
-                <div>
-                  <div
-                    id="AlpagoHomes"
-                    class="carousel slide"
-                    data-ride="carousel"
-                  >
-                    <ol class="carousel-indicators">
-                      <li
-                        data-target="#AlpagoHomes"
-                        data-slide-to="0"
-                        class="active"
-                      ></li>
-                      <li data-target="#AlpagoHomes" data-slide-to="1"></li>
-                      <li data-target="#AlpagoHomes" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img
-                          src="img/slide-1.jpg"
-                          class="d-block w-100 h-680"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="carousel-item">
-                        <img
-                          src="img/slide-2.jpg"
-                          class="d-block w-100 h-680"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="carousel-item">
-                        <img
-                          src="img/slide-3.jpg"
-                          class="d-block w-100 h-680"
-                          alt="..."
-                        />
-                      </div>
-                    </div>
-                    <a
-                      class="
-                        carousel-control-prev carousel-control-prev-custom
-                        gradient-border
-                      "
-                      href="#AlpagoHomes"
-                      role="button"
-                      data-slide="prev"
-                    >
-                      <!-- <span
-                        class="carousel-control-prev-icon"
-                        aria-hidden="true"
-                      ></span> -->
-                      <i
-                        class="
-                          fa-chevron-left
-                          fas
-                          font-weight-bolder
-                          fs-22
-                          gradient-color
-                        "
-                      ></i>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                    <a
-                      class="
-                        carousel-control-next carousel-control-next-custom
-                        gradient-border
-                      "
-                      href="#AlpagoHomes"
-                      role="button"
-                      data-slide="next"
-                    >
-                      <!-- <span
-                        class="carousel-control-next-icon"
-                        aria-hidden="true"
-                      ></span> -->
-                      <i
-                        class="
-                          fa-chevron-right
-                          fas
-                          font-weight-bolder
-                          fs-22
-                          gradient-color
-                        "
-                      ></i>
-                      <span class="sr-only">Next</span>
-                    </a>
-                  </div>
-                </div>
-                <div class="company-info-box-right text-center p-4">
-                  <img
-                    src="img/alpago-homes.png"
-                    class="img-fluid mb-4 w-150"
-                    alt="Alpago Homes"
-                  />
-                  <p class="text-white fs-20 text-justify">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                    quis nostrud exerci tation ullamcorper suscipit lobortis
-                    nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-                    iriure dolor in hendrerit in vulputate velit esse molestie
-                    consequat
-                  </p>
-                  <div class="company-info-box-social">
-                    <a href="#" class="text-white">
-                      <i class="fab fa-facebook-f fs-26 m-4"></i>
-                    </a>
-                    <a href="#" class="text-white">
-                      <i class="fab fa-instagram fs-26 m-4"></i>
-                    </a>
-                    <a href="#" class="text-white">
-                      <i class="fab fa-linkedin-in fs-26 m-4"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--Alpago Homes End-->
-
-            <!--Alpago Contracting-->
-            <div class="row mt-150">
-              <div class="col-3"></div>
-              <div class="col-9 pr-0">
-                <div>
-                  <div
-                    id="AlpagoContracting"
-                    class="carousel slide"
-                    data-ride="carousel"
-                  >
-                    <ol class="carousel-indicators">
-                      <li
-                        data-target="#AlpagoContracting"
-                        data-slide-to="0"
-                        class="active"
-                      ></li>
-                      <li
-                        data-target="#AlpagoContracting"
-                        data-slide-to="1"
-                      ></li>
-                      <li
-                        data-target="#AlpagoContracting"
-                        data-slide-to="2"
-                      ></li>
-                    </ol>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img
-                          src="img/slide-1.jpg"
-                          class="d-block w-100 h-680"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="carousel-item">
-                        <img
-                          src="img/slide-2.jpg"
-                          class="d-block w-100 h-680"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="carousel-item">
-                        <img
-                          src="img/slide-3.jpg"
-                          class="d-block w-100 h-680"
-                          alt="..."
-                        />
-                      </div>
-                    </div>
-                    <a
-                      class="
-                        carousel-control-prev carousel-control-prev-custom-right
-                        gradient-border
-                      "
-                      href="#AlpagoContracting"
-                      role="button"
-                      data-slide="prev"
-                    >
-                      <i
-                        class="
-                          fa-chevron-left
-                          fas
-                          font-weight-bolder
-                          fs-22
-                          gradient-color
-                        "
-                      ></i>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                    <a
-                      class="
-                        carousel-control-next carousel-control-next-custom-right
-                        gradient-border
-                      "
-                      href="#AlpagoContracting"
-                      role="button"
-                      data-slide="next"
-                    >
-                      <i
-                        class="
-                          fa-chevron-right
-                          fas
-                          font-weight-bolder
-                          fs-22
-                          gradient-color
-                        "
-                      ></i>
-                      <span class="sr-only">Next</span>
-                    </a>
-                  </div>
-                </div>
-                <div class="company-info-box-left text-center p-4">
-                  <img
-                    src="img/alpago-contracting.png"
-                    class="img-fluid mb-4 w-150"
-                    alt="Alpago Contracting"
-                  />
-                  <p class="text-white fs-20 text-justify">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                    quis nostrud exerci tation ullamcorper suscipit lobortis
-                    nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-                    iriure dolor in hendrerit in vulputate velit esse molestie
-                    consequat
-                  </p>
-                  <div class="company-info-box-social">
-                    <a href="#" class="text-white">
-                      <i class="fab fa-facebook-f fs-26 m-4"></i>
-                    </a>
-                    <a href="#" class="text-white">
-                      <i class="fab fa-instagram fs-26 m-4"></i>
-                    </a>
-                    <a href="#" class="text-white">
-                      <i class="fab fa-linkedin-in fs-26 m-4"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--Alpago Contracting End-->
-
-            <!--Milad-->
-            <div class="row mt-150 mb-250">
-              <div class="col-9 pl-0">
-                <div>
-                  <div id="Milad" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                      <li
-                        data-target="#Milad"
-                        data-slide-to="0"
-                        class="active"
-                      ></li>
-                      <li data-target="#Milad" data-slide-to="1"></li>
-                      <li data-target="#Milad" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img
-                          src="img/slide-1.jpg"
-                          class="d-block w-100 h-680"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="carousel-item">
-                        <img
-                          src="img/slide-2.jpg"
-                          class="d-block w-100 h-680"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="carousel-item">
-                        <img
-                          src="img/slide-3.jpg"
-                          class="d-block w-100 h-680"
-                          alt="..."
-                        />
-                      </div>
-                    </div>
-                    <a
-                      class="
-                        carousel-control-prev carousel-control-prev-custom
-                        gradient-border
-                      "
-                      href="#Milad"
-                      role="button"
-                      data-slide="prev"
-                    >
-                      <!-- <span
-                        class="carousel-control-prev-icon"
-                        aria-hidden="true"
-                      ></span> -->
-                      <i
-                        class="
-                          fa-chevron-left
-                          fas
-                          font-weight-bolder
-                          fs-22
-                          gradient-color
-                        "
-                      ></i>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                    <a
-                      class="
-                        carousel-control-next carousel-control-next-custom
-                        gradient-border
-                      "
-                      href="#Milad"
-                      role="button"
-                      data-slide="next"
-                    >
-                      <!-- <span
-                        class="carousel-control-next-icon"
-                        aria-hidden="true"
-                      ></span> -->
-                      <i
-                        class="
-                          fa-chevron-right
-                          fas
-                          font-weight-bolder
-                          fs-22
-                          gradient-color
-                        "
-                      ></i>
-                      <span class="sr-only">Next</span>
-                    </a>
-                  </div>
-                </div>
-                <div class="company-info-box-right text-center p-4">
-                  <img
-                    src="img/milad.png"
-                    class="img-fluid mb-4 w-150"
-                    alt="Milad"
-                  />
-                  <p class="text-white fs-20 text-justify">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                    quis nostrud exerci tation ullamcorper suscipit lobortis
-                    nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-                    iriure dolor in hendrerit in vulputate velit esse molestie
-                    consequat
-                  </p>
-                  <div class="company-info-box-social">
-                    <a href="#" class="text-white">
-                      <i class="fab fa-facebook-f fs-26 m-4"></i>
-                    </a>
-                    <a href="#" class="text-white">
-                      <i class="fab fa-instagram fs-26 m-4"></i>
-                    </a>
-                    <a href="#" class="text-white">
-                      <i class="fab fa-linkedin-in fs-26 m-4"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--Milad End-->
-          </div>
-          <!--Second Div End-->
-          <!--Third Div-->
-
-          <!--Third Div End-->
-          <!--Fourth Div-->
-
-          <!--Fourth Div End-->
-        </div>
-        <div
-          class="
-            col-md-1 col-sm-1 col-xs-2
-            px-0
-            right-bg-color
-            text-center
-            vh-100
-          "
-          style="position: sticky; top: 0"
+    <nav class="navbar navbar-expand-lg navbar-light bg-light custom-nav pb-3">
+      <div class="container-fluid nav-bar">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-          <div id="mySidepanel" class="sidepanel">
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link active custom-nav-link"
+                aria-current="page"
+                href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="#">Business Sectors</a>
+            </li>
+            <li>
+              <a class="navbar-brand" href="#">
+                <img
+                  src="./images/logo.png"
+                  alt=""
+                  width="100px"
+                  height="80px"
+                  class="logo-image"
+                />
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="#">News & Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="#">Careers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="#">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link custom-nav-link"
+                href="#"
+                style="
+                  color: #003463 !important ;
+                  font-family: 'Bahij_font', 'sans-serif';
+                "
+                >العربية</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- first carousel -->
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <ol class="carousel-indicators custom-carousel-indicator">
+        <li
+          data-target="#carouselExampleIndicators"
+          data-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></li>
+        <li
+          data-target="#carouselExampleIndicators"
+          data-slide-to="1"
+          aria-current="true"
+          aria-label="Slide 2"
+        ></li>
+        <li
+          data-target="#carouselExampleIndicators"
+          data-slide-to="2"
+          aria-current="true"
+          aria-label="Slide 3"
+        ></li>
+        <li
+          data-target="#carouselExampleIndicators"
+          data-slide-to="3"
+          aria-current="true"
+          aria-label="Slide 4"
+        ></li>
+      </ol>
+      <!-- <div class="carousel-indicators custom-carousel-indicator">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="btn-indicator active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          class="btn-indicator"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          class="btn-indicator"
+          aria-label="Slide 3"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="3"
+          class="btn-indicator"
+          aria-label="Slide 4"
+        ></button>
+      </div> -->
+      <button
+        class="carousel-control-prev custom-carousel-control-prev"
+        type="button"
+        data-target="#carouselExampleIndicators"
+        data-slide="prev"
+        style="background: none; border: none"
+      >
+        <div class="first-left-carousel"></div>
+      </button>
+      <button
+        class="carousel-control-next custom-carousel-control-next"
+        type="button"
+        data-target="#carouselExampleIndicators"
+        data-slide="next"
+        style="background: none; border: none"
+      >
+        <div class="first-right-carousel"></div>
+      </button>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <!-- <img src="./images/sliderImage-1.png" class="d-block w-100"> -->
+          <video
+            class="video-carousel"
+            src="./images/slider-one.mp4"
+            autoplay
+            muted
+            loop
+          ></video>
+        </div>
+        <div class="carousel-item">
+          <div class="welcome-section">
+            <div class="welcome-bg-img d-flex align-items-center">
+              <div class="card custom-card">
+                <div class="image">
+                  <img src="./images/card-1.png" class="image-cards" />
+                </div>
+                <div class="card-img-overlay d-flex align-items-center">
+                  <div>
+                    <div class="title-card">
+                      <h4>
+                        Welcome to Balubaid <br />
+                        Group of Companies
+                      </h4>
+                    </div>
+                    <div class="para-card">
+                      Established in 1952, Balubaid Group of Companies (BGC)
+                      today is a modern, diversified holding company whose
+                      operating activities span eight sectors in the Kingdom of
+                      Saudi Arabia.
+                    </div>
+                    <button
+                      type="button"
+                      class="btn btn-outline-primary card-btn-read-more"
+                    >
+                      Read More
+                      <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+                <!-- <div class="image-hover">
+                  <img
+                    src="./images/top-right.png"
+                    alt="Hover Image"
+                    class="top-right"
+                  />
+                </div>
+                <div class="image-hover">
+                  <img
+                    src="./images/bouncupimage.png"
+                    alt="Hover Image"
+                    class="bounce-image"
+                  />
+                </div> -->
+              </div>
+            </div>
           </div>
-          <button class="openbtn" onclick="toggleNav()">
-            <i class="fas fa-bars"></i>
-            <p class="text-white menu-text">menu</p>
-            <img src="img/logo.png" alt="logo" class="w-80 logo-bottom" />
-          </button>
+        </div>
+        <div class="carousel-item">
+          <video
+            class="video-carousel"
+            src="./videos/slider-video-2.mp4"
+            autoplay
+            muted
+            loop
+          ></video>
+        </div>
+        <div class="carousel-item">
+          <div class="welcome-section">
+            <div class="welcome-bg-img d-flex align-items-center">
+              <div class="card custom-card">
+                <div class="image">
+                  <img src="./images/card-1.png" class="image-cards" />
+                </div>
+                <div class="card-img-overlay d-flex align-items-center">
+                  <div>
+                    <div class="title-card">
+                      <h4>
+                        Welcome to Balubaid <br />
+                        Group of Companies
+                      </h4>
+                    </div>
+                    <div class="para-card">
+                      Established in 1952, Balubaid Group of Companies (BGC)
+                      today is a modern, diversified holding company whose
+                      operating activities span eight sectors in the Kingdom of
+                      Saudi Arabia.
+                    </div>
+                    <button
+                      type="button"
+                      class="btn btn-outline-primary card-btn-read-more"
+                    >
+                      Read More
+                      <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+                <!-- <div class="image-hover">
+                  <img
+                    src="./images/top-right.png"
+                    alt="Hover Image"
+                    class="top-right"
+                  />
+                </div>
+                <div class="image-hover">
+                  <img
+                    src="./images/bouncupimage.png"
+                    alt="Hover Image"
+                    class="bounce-image"
+                  />
+                </div> -->
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <!-- end of first carousel -->
 
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <section class="our_sector_section">
+      <div style="background-color: #f4f6f9 !important">
+        <div class="container">
+          <div class="sector-main-div pt-5 pb-5">
+            <!-- <div class="sector_heading">
+              <h1 class="text-center pt-3 pb-5">OUR SECTORS</h1>
+            </div> -->
+            <div class="row">
+              <div class="col-md-11 col-sm-11 col-xs-10 px-0">
+                <!--First Div-->
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12 text-center mt-50">
+                      <!-- <h1 class="about-main-heading d-inline-block text-left">
+                        Our <span class="font-weight-bolder">SECTORS</span>
+                      </h1> -->
+                    </div>
+                    <div class="col-12 text-center my-4">
+                      <div class="slogan-left-bar"></div>
+                      <!-- <p class="d-inline-block slogan-text">Balubaid Group</p> -->
+                      <h1 class="about-main-heading d-inline-block text-left">
+                        Our <span class="font-weight-bolder">SECTORS</span>
+                      </h1>
+                      <div class="slogan-right-bar"></div>
+                    </div>
+                    <!-- <div class="col-12 text-center my-4">
+                      <p class="fs-26 px-5">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+                        dolore magna aliquam erat volutpat. Ut wisi enim ad
+                        minim veniam, quis nostrud exerci tation ullamcorper
+                        suscipit lobortis nisl ut aliquip ex ea commodo
+                        consequat. Duis autem vel eum iriure dolor in hendrerit
+                        in vulputate velit esse molestie consequat, vel illum
+                        dolore eu feugiat nulla facilisis at vero eros et
+                        accumsan et iusto odio dignissim qui blandit praesent
+                        luptatum zzril delenit augue duis dolore te feugait
+                        nulla facilisi.
+                      </p>
+                    </div> -->
+                  </div>
+                </div>
+                <!--First Div End-->
+                <!--Second Div-->
+
+                <!--Second Div End-->
+                <!--Third Div-->
+
+                <!--Third Div End-->
+                <!--Fourth Div-->
+
+                <!--Fourth Div End-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <!--Automotive-->
+          <div class="row">
+            <div class="col-9 pl-0" style="display: block; position: relative">
+              <div id="Automotive" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-interval="10000">
+                    <img
+                      src="images/car-image-3.jpg"
+                      class="d-block w-100 h-680"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/car-image-2.jpg"
+                      class="d-block w-100 h-680"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <a
+                  class="carousel-control-prev carousel-control-prev-custom gradient-border"
+                  href="#Automotive"
+                  role="button"
+                  data-slide="prev"
+                >
+                  <!-- <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span> -->
+                  <i
+                    class="fa-chevron-left fas font-weight-bolder fs-22 gradient-color"
+                  ></i>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a
+                  class="carousel-control-next carousel-control-next-custom gradient-border"
+                  href="#Automotive"
+                  role="button"
+                  data-slide="next"
+                >
+                  <!-- <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span> -->
+                  <i
+                    class="fa-chevron-right fas font-weight-bolder fs-22 gradient-color"
+                  ></i>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+              <div class="company-info-box-right text-center p-4">
+                <h2 class="title mb-4 brown-text">Automotive</h2>
+                <p class="text-white fs-18 text-justify">
+                  Balubaid has over 65 years of automotive history, including
+                  over five decades as an agent or exclusive distributor for
+                  brands including Chevrolet, GMC, Cadillac, Buick, Opel,
+                  Pontiac, Subaru, Daihatsu, and Peugeot.
+                </p>
+                <img
+                  src="images/bouncupimage.png"
+                  class="triangles-div"
+                  alt=""
+                />
+                <div class="company-info-box-social">
+                  <a href="#" class="text-white">
+                    <i class="fab fa-facebook-f fs-26 m-4"></i>
+                  </a>
+                  <a href="#" class="text-white">
+                    <i class="fab fa-instagram fs-26 m-4"></i>
+                  </a>
+                  <a href="#" class="text-white">
+                    <i class="fab fa-linkedin-in fs-26 m-4"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Automotive End-->
+
+          <!--Manufacturing-->
+          <div class="row mt-150">
+            <div class="col-3"></div>
+            <div class="col-9 pr-0" style="display: block; position: relative">
+              <div>
+                <div
+                  id="AlpagoProperties"
+                  class="carousel slide"
+                  data-ride="carousel"
+                >
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="images/manufacture.jpg"
+                        class="d-block w-100 h-680"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="images/manufacture.jpg"
+                        class="d-block w-100 h-680"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                  <a
+                    class="carousel-control-prev carousel-control-prev-custom-right gradient-border"
+                    href="#AlpagoProperties"
+                    role="button"
+                    data-slide="prev"
+                  >
+                    <i
+                      class="fa-chevron-left fas font-weight-bolder fs-22 gradient-color"
+                    ></i>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a
+                    class="carousel-control-next carousel-control-next-custom-right gradient-border"
+                    href="#AlpagoProperties"
+                    role="button"
+                    data-slide="next"
+                  >
+                    <i
+                      class="fa-chevron-right fas font-weight-bolder fs-22 gradient-color"
+                    ></i>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+              </div>
+              <div class="company-info-box-left text-center p-4">
+                <h2 class="title mb-4 brown-text">Manufacturing</h2>
+                <p class="text-white fs-18 text-justify">
+                  Balubaid has over 65 years of automotive history, including
+                  over five decades as an agent or exclusive distributor for
+                  brands including Chevrolet, GMC, Cadillac, Buick, Opel,
+                  Pontiac, Subaru, Daihatsu, and Peugeot.
+                </p>
+                <img
+                  src="images/bouncupimage.png"
+                  class="triangles-div-left"
+                  alt=""
+                />
+                <div class="company-info-box-social">
+                  <a href="#" class="text-white">
+                    <i class="fab fa-facebook-f fs-26 m-4"></i>
+                  </a>
+                  <a href="#" class="text-white">
+                    <i class="fab fa-instagram fs-26 m-4"></i>
+                  </a>
+                  <a href="#" class="text-white">
+                    <i class="fab fa-linkedin-in fs-26 m-4"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Manufacturing End-->
+
+          <!--Real Estate -->
+          <div class="row mt-150 bg-triangle-right">
+            <div class="col-9 pl-0" style="display: block; position: relative">
+              <div id="RealEstate" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-interval="10000">
+                    <img
+                      src="images/real-estate-slider.jpg"
+                      class="d-block w-100 h-680"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/real-estate-slider.jpg"
+                      class="d-block w-100 h-680"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <a
+                  class="carousel-control-prev carousel-control-prev-custom gradient-border"
+                  href="#RealEstate"
+                  role="button"
+                  data-slide="prev"
+                >
+                  <!-- <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span> -->
+                  <i
+                    class="fa-chevron-left fas font-weight-bolder fs-22 gradient-color"
+                  ></i>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a
+                  class="carousel-control-next carousel-control-next-custom gradient-border"
+                  href="#RealEstate"
+                  role="button"
+                  data-slide="next"
+                >
+                  <!-- <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span> -->
+                  <i
+                    class="fa-chevron-right fas font-weight-bolder fs-22 gradient-color"
+                  ></i>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+              <div class="company-info-box-right text-center p-4">
+                <h2 class="title mb-4 brown-text">Real Estate</h2>
+                <p class="text-white fs-18 text-justify">
+                  Balubaid has over 65 years of automotive history, including
+                  over five decades as an agent or exclusive distributor for
+                  brands including Chevrolet, GMC, Cadillac, Buick, Opel,
+                  Pontiac, Subaru, Daihatsu, and Peugeot.
+                </p>
+                <img
+                  src="images/bouncupimage.png"
+                  class="triangles-div"
+                  alt=""
+                />
+                <div class="company-info-box-social">
+                  <a href="#" class="text-white">
+                    <i class="fab fa-facebook-f fs-26 m-4"></i>
+                  </a>
+                  <a href="#" class="text-white">
+                    <i class="fab fa-instagram fs-26 m-4"></i>
+                  </a>
+                  <a href="#" class="text-white">
+                    <i class="fab fa-linkedin-in fs-26 m-4"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Real Estate End-->
+
+          <!--Finance-->
+          <div class="row mt-150">
+            <div class="col-3"></div>
+            <div class="col-9 pr-0" style="display: block; position: relative">
+              <div>
+                <div id="Finance" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="images/finance.jpg"
+                        class="d-block w-100 h-680"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="images/finance.jpg"
+                        class="d-block w-100 h-680"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                  <a
+                    class="carousel-control-prev carousel-control-prev-custom-right gradient-border"
+                    href="#Finance"
+                    role="button"
+                    data-slide="prev"
+                  >
+                    <i
+                      class="fa-chevron-left fas font-weight-bolder fs-22 gradient-color"
+                    ></i>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a
+                    class="carousel-control-next carousel-control-next-custom-right gradient-border"
+                    href="#Finance"
+                    role="button"
+                    data-slide="next"
+                  >
+                    <i
+                      class="fa-chevron-right fas font-weight-bolder fs-22 gradient-color"
+                    ></i>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+              </div>
+              <div class="company-info-box-left text-center p-4">
+                <h2 class="title mb-4 brown-text">Finance</h2>
+                <p class="text-white fs-18 text-justify">
+                  Balubaid has over 65 years of automotive history, including
+                  over five decades as an agent or exclusive distributor for
+                  brands including Chevrolet, GMC, Cadillac, Buick, Opel,
+                  Pontiac, Subaru, Daihatsu, and Peugeot.
+                </p>
+                <img
+                  src="images/bouncupimage.png"
+                  class="triangles-div-left"
+                  alt=""
+                />
+                <div class="company-info-box-social">
+                  <a href="#" class="text-white">
+                    <i class="fab fa-facebook-f fs-26 m-4"></i>
+                  </a>
+                  <a href="#" class="text-white">
+                    <i class="fab fa-instagram fs-26 m-4"></i>
+                  </a>
+                  <a href="#" class="text-white">
+                    <i class="fab fa-linkedin-in fs-26 m-4"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Finance End-->
+
+          <!--Entertainment -->
+          <div class="row mt-150">
+            <div class="col-9 pl-0" style="display: block; position: relative">
+              <div
+                id="Entertainment"
+                class="carousel slide"
+                data-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-interval="10000">
+                    <img
+                      src="images/entertaintment-slider.jpg"
+                      class="d-block w-100 h-680"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/entertaintment-slider.jpg"
+                      class="d-block w-100 h-680"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <a
+                  class="carousel-control-prev carousel-control-prev-custom gradient-border"
+                  href="#Entertainment"
+                  role="button"
+                  data-slide="prev"
+                >
+                  <!-- <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span> -->
+                  <i
+                    class="fa-chevron-left fas font-weight-bolder fs-22 gradient-color"
+                  ></i>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a
+                  class="carousel-control-next carousel-control-next-custom gradient-border"
+                  href="#Entertainment"
+                  role="button"
+                  data-slide="next"
+                >
+                  <!-- <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span> -->
+                  <i
+                    class="fa-chevron-right fas font-weight-bolder fs-22 gradient-color"
+                  ></i>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+              <div class="company-info-box-right text-center p-4">
+                <h2 class="title mb-4 brown-text">Entertainment</h2>
+                <p class="text-white fs-18 text-justify">
+                  Balubaid has over 65 years of automotive history, including
+                  over five decades as an agent or exclusive distributor for
+                  brands including Chevrolet, GMC, Cadillac, Buick, Opel,
+                  Pontiac, Subaru, Daihatsu, and Peugeot.
+                </p>
+                <img
+                  src="images/bouncupimage.png"
+                  class="triangles-div"
+                  alt=""
+                />
+                <div class="company-info-box-social">
+                  <a href="#" class="text-white">
+                    <i class="fab fa-facebook-f fs-26 m-4"></i>
+                  </a>
+                  <a href="#" class="text-white">
+                    <i class="fab fa-instagram fs-26 m-4"></i>
+                  </a>
+                  <a href="#" class="text-white">
+                    <i class="fab fa-linkedin-in fs-26 m-4"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Entertainment End-->
+
+          <!--Consultancy-->
+          <div class="row mt-150 bg-triangle-left">
+            <div class="col-3"></div>
+            <div class="col-9 pr-0" style="display: block; position: relative">
+              <div>
+                <div
+                  id="Consultancy"
+                  class="carousel slide"
+                  data-ride="carousel"
+                >
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="images/consultant.jpg"
+                        class="d-block w-100 h-680"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="images/consultant.jpg"
+                        class="d-block w-100 h-680"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                  <a
+                    class="carousel-control-prev carousel-control-prev-custom-right gradient-border"
+                    href="#Consultancy"
+                    role="button"
+                    data-slide="prev"
+                  >
+                    <i
+                      class="fa-chevron-left fas font-weight-bolder fs-22 gradient-color"
+                    ></i>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a
+                    class="carousel-control-next carousel-control-next-custom-right gradient-border"
+                    href="#Consultancy"
+                    role="button"
+                    data-slide="next"
+                  >
+                    <i
+                      class="fa-chevron-right fas font-weight-bolder fs-22 gradient-color"
+                    ></i>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+              </div>
+              <div class="company-info-box-left text-center p-4">
+                <h2 class="title mb-4 brown-text">Consultancy</h2>
+                <p class="text-white fs-18 text-justify">
+                  Balubaid has over 65 years of automotive history, including
+                  over five decades as an agent or exclusive distributor for
+                  brands including Chevrolet, GMC, Cadillac, Buick, Opel,
+                  Pontiac, Subaru, Daihatsu, and Peugeot.
+                </p>
+                <img
+                  src="images/bouncupimage.png"
+                  class="triangles-div-left"
+                  alt=""
+                />
+                <div class="company-info-box-social">
+                  <a href="#" class="text-white">
+                    <i class="fab fa-facebook-f fs-26 m-4"></i>
+                  </a>
+                  <a href="#" class="text-white">
+                    <i class="fab fa-instagram fs-26 m-4"></i>
+                  </a>
+                  <a href="#" class="text-white">
+                    <i class="fab fa-linkedin-in fs-26 m-4"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Consultancy End-->
+
+          <!--Fitout & Furnishing -->
+          <div class="row mt-150">
+            <div class="col-9 pl-0" style="display: block; position: relative">
+              <div id="Fitout" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-interval="10000">
+                    <img
+                      src="images/fitout.jpg"
+                      class="d-block w-100 h-680"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/fitout.jpg"
+                      class="d-block w-100 h-680"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <a
+                  class="carousel-control-prev carousel-control-prev-custom gradient-border"
+                  href="#Fitout"
+                  role="button"
+                  data-slide="prev"
+                >
+                  <!-- <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span> -->
+                  <i
+                    class="fa-chevron-left fas font-weight-bolder fs-22 gradient-color"
+                  ></i>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a
+                  class="carousel-control-next carousel-control-next-custom gradient-border"
+                  href="#Fitout"
+                  role="button"
+                  data-slide="next"
+                >
+                  <!-- <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span> -->
+                  <i
+                    class="fa-chevron-right fas font-weight-bolder fs-22 gradient-color"
+                  ></i>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+              <div class="company-info-box-right text-center p-4">
+                <h2 class="title mb-4 brown-text">Fitout & Furnishing</h2>
+                <p class="text-white fs-18 text-justify">
+                  Balubaid has over 65 years of automotive history, including
+                  over five decades as an agent or exclusive distributor for
+                  brands including Chevrolet, GMC, Cadillac, Buick, Opel,
+                  Pontiac, Subaru, Daihatsu, and Peugeot.
+                </p>
+                <img
+                  src="images/bouncupimage.png"
+                  class="triangles-div"
+                  alt=""
+                />
+                <div class="company-info-box-social">
+                  <a href="#" class="text-white">
+                    <i class="fab fa-facebook-f fs-26 m-4"></i>
+                  </a>
+                  <a href="#" class="text-white">
+                    <i class="fab fa-instagram fs-26 m-4"></i>
+                  </a>
+                  <a href="#" class="text-white">
+                    <i class="fab fa-linkedin-in fs-26 m-4"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Fitout & Furnishing End-->
+
+          <!--Affiliates-->
+          <div class="row mt-150 mb-150">
+            <div class="col-3"></div>
+            <div class="col-9 pr-0" style="display: block; position: relative">
+              <div>
+                <div
+                  id="Affiliates"
+                  class="carousel slide"
+                  data-ride="carousel"
+                >
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="images/Affiliates.jpg"
+                        class="d-block w-100 h-680"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="images/Affiliates.jpg"
+                        class="d-block w-100 h-680"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                  <a
+                    class="carousel-control-prev carousel-control-prev-custom-right gradient-border"
+                    href="#Affiliates"
+                    role="button"
+                    data-slide="prev"
+                  >
+                    <i
+                      class="fa-chevron-left fas font-weight-bolder fs-22 gradient-color"
+                    ></i>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a
+                    class="carousel-control-next carousel-control-next-custom-right gradient-border"
+                    href="#Affiliates"
+                    role="button"
+                    data-slide="next"
+                  >
+                    <i
+                      class="fa-chevron-right fas font-weight-bolder fs-22 gradient-color"
+                    ></i>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+              </div>
+              <div class="company-info-box-left text-center p-4">
+                <h2 class="title mb-4 brown-text">Affiliates</h2>
+                <p class="text-white fs-18 text-justify">
+                  Balubaid has over 65 years of automotive history, including
+                  over five decades as an agent or exclusive distributor for
+                  brands including Chevrolet, GMC, Cadillac, Buick, Opel,
+                  Pontiac, Subaru, Daihatsu, and Peugeot.
+                </p>
+                <img
+                  src="images/bouncupimage.png"
+                  class="triangles-div-left"
+                  alt=""
+                />
+                <div class="company-info-box-social">
+                  <a href="#" class="text-white">
+                    <i class="fab fa-facebook-f fs-26 m-4"></i>
+                  </a>
+                  <a href="#" class="text-white">
+                    <i class="fab fa-instagram fs-26 m-4"></i>
+                  </a>
+                  <a href="#" class="text-white">
+                    <i class="fab fa-linkedin-in fs-26 m-4"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Affiliates End-->
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-150 mb-150">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center my-4">
+            <div class="slogan-left-bar"></div>
+            <!-- <p class="d-inline-block slogan-text">Balubaid Group</p> -->
+            <h1 class="about-main-heading d-inline-block text-left">
+              Our <span class="font-weight-bolder">Partners</span>
+            </h1>
+            <div class="slogan-right-bar"></div>
+          </div>
+          <div
+            class="MultiCarousel"
+            data-items="1,3,5,6"
+            data-slide="1"
+            id="MultiCarousel"
+            data-interval="1000"
+          >
+            <div class="MultiCarousel-inner">
+              <div class="item">
+                <div class="image-wrapper hover-opacity">
+                  <img
+                    src="images/affiliate-1.png"
+                    class="image invert-color hover-up-down"
+                    alt="This is an example description for this item."
+                  />
+                </div>
+              </div>
+              <div class="item">
+                <div class="image-wrapper hover-opacity">
+                  <img
+                    src="images/affiliate-2.png"
+                    class="image invert-color hover-up-down"
+                    alt="This is an example description for this item."
+                  />
+                </div>
+              </div>
+              <div class="item">
+                <div class="image-wrapper hover-opacity">
+                  <img
+                    src="images/affiliate-3.png"
+                    class="image invert-color hover-up-down"
+                    alt="This is an example description for this item."
+                  />
+                </div>
+              </div>
+              <div class="item">
+                <div class="image-wrapper hover-opacity">
+                  <img
+                    src="images/affiliate-1.png"
+                    class="image invert-color hover-up-down"
+                    alt="This is an example description for this item."
+                  />
+                </div>
+              </div>
+              <div class="item">
+                <div class="image-wrapper hover-opacity">
+                  <img
+                    src="images/affiliate-2.png"
+                    class="image invert-color hover-up-down"
+                    alt="This is an example description for this item."
+                  />
+                </div>
+              </div>
+              <div class="item">
+                <div class="image-wrapper hover-opacity">
+                  <img
+                    src="images/affiliate-3.png"
+                    class="image invert-color hover-up-down"
+                    alt="This is an example description for this item."
+                  />
+                </div>
+              </div>
+              <div class="item">
+                <div class="image-wrapper hover-opacity">
+                  <img
+                    src="images/affiliate-1.png"
+                    class="image invert-color hover-up-down"
+                    alt="This is an example description for this item."
+                  />
+                </div>
+              </div>
+              <div class="item">
+                <div class="image-wrapper hover-opacity">
+                  <img
+                    src="images/affiliate-2.png"
+                    class="image invert-color hover-up-down"
+                    alt="This is an example description for this item."
+                  />
+                </div>
+              </div>
+              <div class="item">
+                <div class="image-wrapper hover-opacity">
+                  <img
+                    src="images/affiliate-3.png"
+                    class="image invert-color hover-up-down"
+                    alt="This is an example description for this item."
+                  />
+                </div>
+              </div>
+            </div>
+            <i
+              class="fa-chevron-left fas font-weight-bolder fs-22 gradient-color leftLst"
+            ></i>
+            <!-- <button class="btn btn-primary leftLst"><</button> -->
+            <!-- <button class="btn btn-primary rightLst">></button> -->
+            <i
+              class="fa-chevron-right fas font-weight-bolder fs-22 gradient-color rightLst"
+            ></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer-section page-footer">
+      <div class="container">
+        <div class="row d-flex align-items-center">
+          <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+            <div class="phone-num text-light">
+              <span style="color: #ad713d">T</span>: +966 12 6404444
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <ul class="ps-0 mb-0">
+              <li>
+                <img src="./images/facebook.png" width="30px" height="30px" />
+              </li>
+              <li>
+                <img src="./images/twitter.png" width="30px" height="30px" />
+              </li>
+              <li>
+                <img src="./images/linkdin.png" width="30px" height="30px" />
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+            <div class="email-address text-light">
+              <span style="color: #ad713d">M</span>: info@balubaid.com
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -696,17 +1648,115 @@
       integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
       crossorigin="anonymous"
     ></script>
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script> -->
     <script>
-      var isNavOpen = 0
-      function toggleNav() {
-        if (isNavOpen == 1) {
-          document.getElementById('mySidepanel').style.width = '0'
-          isNavOpen = 0
-        } else {
-          document.getElementById('mySidepanel').style.width = '50%'
-          isNavOpen = 1
+      $(document).ready(function () {
+        var itemsMainDiv = '.MultiCarousel'
+        var itemsDiv = '.MultiCarousel-inner'
+        var itemWidth = ''
+
+        $('.leftLst, .rightLst').click(function () {
+          var condition = $(this).hasClass('leftLst')
+          if (condition) click(0, this)
+          else click(1, this)
+        })
+
+        ResCarouselSize()
+
+        $(window).resize(function () {
+          ResCarouselSize()
+        })
+
+        //this function define the size of the items
+        function ResCarouselSize() {
+          var incno = 0
+          var dataItems = 'data-items'
+          var itemClass = '.item'
+          var id = 0
+          var btnParentSb = ''
+          var itemsSplit = ''
+          var sampwidth = $(itemsMainDiv).width()
+          var bodyWidth = $('body').width()
+          $(itemsDiv).each(function () {
+            id = id + 1
+            var itemNumbers = $(this).find(itemClass).length
+            btnParentSb = $(this).parent().attr(dataItems)
+            itemsSplit = btnParentSb.split(',')
+            $(this)
+              .parent()
+              .attr('id', 'MultiCarousel' + id)
+
+            if (bodyWidth >= 1200) {
+              incno = itemsSplit[3]
+              itemWidth = sampwidth / incno
+            } else if (bodyWidth >= 992) {
+              incno = itemsSplit[2]
+              itemWidth = sampwidth / incno
+            } else if (bodyWidth >= 768) {
+              incno = itemsSplit[1]
+              itemWidth = sampwidth / incno
+            } else {
+              incno = itemsSplit[0]
+              itemWidth = sampwidth / incno
+            }
+            $(this).css({
+              transform: 'translateX(0px)',
+              width: itemWidth * itemNumbers,
+            })
+            $(this)
+              .find(itemClass)
+              .each(function () {
+                $(this).outerWidth(itemWidth)
+              })
+
+            $('.leftLst').addClass('over')
+            $('.rightLst').removeClass('over')
+          })
         }
-      }
+
+        //this function used to move the items
+        function ResCarousel(e, el, s) {
+          var leftBtn = '.leftLst'
+          var rightBtn = '.rightLst'
+          var translateXval = ''
+          var divStyle = $(el + ' ' + itemsDiv).css('transform')
+          var values = divStyle.match(/-?[\d\.]+/g)
+          var xds = Math.abs(values[4])
+          if (e == 0) {
+            translateXval = parseInt(xds) - parseInt(itemWidth * s)
+            $(el + ' ' + rightBtn).removeClass('over')
+
+            if (translateXval <= itemWidth / 2) {
+              translateXval = 0
+              $(el + ' ' + leftBtn).addClass('over')
+            }
+          } else if (e == 1) {
+            var itemsCondition = $(el).find(itemsDiv).width() - $(el).width()
+            translateXval = parseInt(xds) + parseInt(itemWidth * s)
+            $(el + ' ' + leftBtn).removeClass('over')
+
+            if (translateXval >= itemsCondition - itemWidth / 2) {
+              translateXval = itemsCondition
+              $(el + ' ' + rightBtn).addClass('over')
+            }
+          }
+          $(el + ' ' + itemsDiv).css(
+            'transform',
+            'translateX(' + -translateXval + 'px)'
+          )
+        }
+
+        //It is used to get some elements from btn
+        function click(ell, ee) {
+          var Parent = '#' + $(ee).parent().attr('id')
+          var slide = $(Parent).attr('data-slide')
+          ResCarousel(ell, Parent, slide)
+        }
+      })
     </script>
   </body>
 </html>
