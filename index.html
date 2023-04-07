@@ -529,6 +529,78 @@
         width: 100%;
         display: block;
       }
+
+      .box {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+        background-size: cover;
+        background-position: center;
+        transition: all 0.3s ease-out;
+      }
+
+      .box-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        color: #fff;
+        background-color: rgb(0 52 99 / 70%);
+        transition: all 0.3s ease-out;
+        transform: translateY(100%);
+        display: none;
+      }
+
+      .box:hover {
+        transform: scale(1.03);
+      }
+
+      .box:hover .box-content {
+        bottom: 0;
+        transform: translateY(0%);
+        display: block;
+      }
+
+      .box-heading {
+        margin: 0;
+        font-size: 24px;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: all 0.3s ease-out;
+      }
+
+      .box:hover .box-heading {
+        opacity: 1;
+        transform: translateY(0%);
+      }
+
+      .box1 {
+        background-image: url('images/news-and-event-makkah-768x576.jpg');
+      }
+
+      .box2 {
+        background-image: url('images/19119_saudi-women-driving-rights_ddb81d8c-f793-11e7-b42e-2d533d154b0f-768x434.jpg');
+      }
+      .mb-100 {
+        margin-bottom: 100px;
+      }
+      .mb-120 {
+        margin-bottom: 120px !important;
+      }
+      .mb-50 {
+        margin-bottom: 50px;
+      }
+      .date-box {
+        background-color: #ad713d;
+        color: white;
+        width: 275px;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 45px;
+      }
     </style>
   </head>
 
@@ -552,20 +624,18 @@
               <a
                 class="nav-link active custom-nav-link"
                 aria-current="page"
-                href="index.html"
+                href="#"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link custom-nav-link" href="about-us.html"
-                >About Us</a
-              >
+              <a class="nav-link custom-nav-link" href="#">About Us</a>
             </li>
             <li class="nav-item">
               <a class="nav-link custom-nav-link" href="#">Business Sectors</a>
             </li>
             <li>
-              <a class="navbar-brand" href="index.html">
+              <a class="navbar-brand" href="#">
                 <img
                   src="./images/logo.png"
                   alt=""
@@ -1493,6 +1563,61 @@
             </div>
           </div>
           <!--Affiliates End-->
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-150">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center my-4 mb-120">
+            <div class="slogan-left-bar"></div>
+            <!-- <p class="d-inline-block slogan-text">Balubaid Group</p> -->
+            <h1 class="about-main-heading d-inline-block text-left">
+              News & <span class="font-weight-bolder">Events</span>
+            </h1>
+            <div class="slogan-right-bar"></div>
+          </div>
+          <div class="col-sm-6 box-container">
+            <div class="box box1 mb-50">
+              <p class="date-box">Sunday 22 July – 4 August 2018</p>
+              <div class="box-content">
+                <h3 class="box-heading">
+                  The Birds Show Event In Hijaz Mall Makkah
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 box-container">
+            <div class="box box2 mb-50">
+              <p class="date-box">Sunday 22 July – 4 August 2018</p>
+              <div class="box-content">
+                <h3 class="box-heading">
+                  First women-car showroom opens in Saudi Arabia
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 box-container">
+            <div class="box box1 mb-50">
+              <p class="date-box">Sunday 22 July – 4 August 2018</p>
+              <div class="box-content">
+                <h3 class="box-heading">
+                  The Birds Show Event In Hijaz Mall Makkah
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 box-container">
+            <div class="box box2 mb-50">
+              <p class="date-box">Sunday 22 July – 4 August 2018</p>
+              <div class="box-content">
+                <h3 class="box-heading">
+                  First women-car showroom opens in Saudi Arabia
+                </h3>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
