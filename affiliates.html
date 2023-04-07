@@ -1,0 +1,561 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      .font-weight-bolder {
+        font-weight: bolder !important;
+        font-family: 'Dax_regular', sans-serif;
+      }
+      .slogan-left-bar,
+      .slogan-right-bar {
+        height: 2px;
+        /* background: rgb(225,230,77); */
+        background: linear-gradient(
+          90deg,
+          rgb(173 113 61) 0%,
+          rgb(201 186 99) 20%,
+          rgb(173 113 61) 50%,
+          rgb(205 190 103) 80%,
+          rgb(173 114 61) 100%
+        );
+        width: 20%;
+        display: inline-block;
+        margin: 8px 26px;
+      }
+      .slogan-text {
+        font-size: 26px;
+      }
+      .page-footer {
+        display: flex;
+        align-items: center;
+      }
+
+      .page-footer ul {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .page-footer ul li {
+        display: inline-block;
+        margin-right: 15px;
+      }
+
+      .footer-section {
+        background-color: #003463 !important;
+        height: 90px;
+      }
+      @font-face {
+        font-family: 'Bahij_font';
+        src: url('./assets/fonts/Bahij_TheSansArabic-Bold.ttf');
+      }
+
+      @font-face {
+        font-family: 'Dax_light';
+        src: url('./assets/fonts/Dax-Light.otf');
+      }
+
+      @font-face {
+        font-family: 'Dax_regular';
+        src: url('./assets/fonts/Dax\ Regular.ttf');
+      }
+
+      @font-face {
+        font-family: 'Dax_medium';
+        src: url('./assets/fonts/Dax-Medium.otf');
+      }
+
+      @font-face {
+        font-family: 'Lexend_light';
+        src: url('./assets/fonts/Lexend-Light.ttf');
+      }
+
+      @font-face {
+        font-family: 'Lexend_bold';
+        src: url('./assets/fonts/Lexend-Bold.ttf');
+      }
+
+      a {
+        text-decoration: none !important;
+        color: #003463 !important;
+      }
+
+      .custom-nav {
+        background-color: #fff !important;
+      }
+
+      .custom-nav-link {
+        color: #ad713d !important;
+        padding-top: 25px;
+        margin-left: 20px;
+      }
+
+      .logo-image {
+        margin-left: 20px;
+      }
+
+      @media (min-width: 992px) and (max-width: 1920px) {
+        #navbarSupportedContent {
+          display: flex !important;
+          justify-content: space-around !important;
+        }
+      }
+
+      .affiliates_ban_sec {
+        width: 100%;
+      }
+
+      .affiliates_ban_img {
+        width: 100%;
+        position: relative;
+      }
+
+      .affiliates_ban_img img {
+        width: 100%;
+        height: 600px;
+      }
+
+      .affiliates_ban_text {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        -ms-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+
+      .affiliates_ban_text h1 {
+        font-size: 60px !important;
+        font-weight: 500;
+        font-family: 'Dax_medium', sans-serif !important;
+        text-align: center;
+        color: #003463;
+        letter-spacing: 2px;
+      }
+
+      .affiliates_image_icon {
+        margin-right: 20px !important;
+      }
+
+      @media only screen and (max-width: 756px) {
+        .affiliates_ban_text h1 {
+          font-size: 40px !important;
+        }
+        .affiliates_image_icon {
+          width: 60px !important;
+          height: 60px !important;
+        }
+      }
+
+      .affiliate_section {
+        margin-top: 5rem;
+      }
+
+      .affiliate-half-fluid .affiliate-left-half,
+      .affiliate-half-fluid .affiliate-right-half {
+        left: 50%;
+        margin-left: -50vw;
+        max-width: 100vw;
+        position: relative;
+        right: 50%;
+        width: 100vw;
+        padding: 0px;
+      }
+
+      .affiliate-half-fluid .affiliate-image-1 {
+        background-image: url('./images/affiliate-image-1.jpg');
+        background-size: cover;
+        background-position: center;
+        /* min-height: 400px; */
+        height: 100%;
+      }
+
+      .affiliate-half-fluid .affiliate-image-2 {
+        background-image: url('./images/affiliate_image_2.jpg');
+        background-size: cover;
+        background-position: center;
+        /* min-height: 400px; */
+        height: 100%;
+      }
+
+      .affiliate-half-fluid .affiliate-image-3 {
+        background-image: url('./images/affiliate_image_3.jpg');
+        background-size: cover;
+        background-position: center;
+        /* min-height: 400px; */
+        height: 100%;
+      }
+
+      @media (min-width: 992px) {
+        .affiliate-half-fluid .affiliate-left-half {
+          padding-left: 0 !important;
+          position: absolute;
+          left: 0;
+          right: 50%;
+          margin-left: auto;
+          width: auto;
+        }
+        .affiliate-half-fluid .affiliate-right-half {
+          padding-right: 0 !important;
+          position: absolute;
+          right: 0;
+          left: 50%;
+          margin-left: auto;
+          width: auto;
+        }
+      }
+
+      @media only screen and (max-width: 992px) and (min-width: 375px) {
+        .affiliate-image-1,
+        .affiliate-image-2,
+        .affiliate-image-3 {
+          min-height: 400px;
+        }
+      }
+
+      .affiliate-second-container .affiliate-content-col,
+      .affiliate-third-container .affiliate-content-col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 25px;
+      }
+
+      .affiliate-first-container .affiliate-content-col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .affiliate-top-content {
+        width: 600px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .affiliate-top-content p {
+        font-size: 16px;
+        line-height: 1.5em;
+        letter-spacing: 1px;
+        font-family: 'Lexend_light', sans-serif;
+        text-align: justify;
+      }
+
+      .affiliate-top-content h1 {
+        letter-spacing: 2px;
+        /* padding-bottom: 5px; */
+        margin: 0;
+        font-size: 42px;
+        color: #003463;
+        font-family: 'Dax_medium', sans-serif;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light custom-nav pb-3">
+      <div class="container-fluid nav-bar">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link active custom-nav-link"
+                aria-current="page"
+                href="index.html"
+                style="color: white !important"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active custom-nav-link"
+                aria-current="page"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="about-us.html"
+                >About Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="#">Business Sectors</a>
+            </li>
+            <li>
+              <a class="navbar-brand" href="index.html">
+                <img
+                  src="./images/logo.png"
+                  alt=""
+                  width="100px"
+                  height="80px"
+                  class="logo-image"
+                  style="width: 100px !important; height: 80px !important"
+                />
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="#">News & Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="#">Careers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="#">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link custom-nav-link"
+                href="#"
+                style="
+                  color: #003463 !important ;
+                  font-family: 'Bahij_font', 'sans-serif';
+                "
+                >العربية</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="affiliates_ban_sec mb-5">
+      <div class="container-fluid p-0">
+        <div class="affiliates_ban_img">
+          <img src="images/affiliates_banner.jpg" alt="banner" />
+        </div>
+      </div>
+    </section>
+    <div class="container-fluid mt-5">
+      <div class="row">
+        <div class="col-12 text-center my-4">
+          <div class="slogan-left-bar"></div>
+          <!-- <p class="d-inline-block slogan-text">Balubaid Group</p> -->
+          <h1 class="about-main-heading d-inline-block text-left">
+            <span class="font-weight-bolder">Affiliates</span>
+          </h1>
+          <div class="slogan-right-bar"></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="affiliate_section mb-5">
+      <!-- Two column: Fluid image left, contained text right -->
+      <div
+        class="container-fluid position-relative affiliate-half-fluid affiliate-first-container"
+        style="height: 430px !important"
+      >
+        <div class="container-fluid">
+          <div class="row">
+            <!-- Image -->
+            <div
+              class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 position-lg-absolute affiliate-left-half h-100"
+            >
+              <div class="affiliate-image-1"></div>
+            </div>
+
+            <!-- Text -->
+            <div
+              class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 offset-lg-6 py-5 ps-lg-5 affiliate-content-col"
+            >
+              <div class="affiliate-top-content">
+                <div class="d-flex align-items-center pb-2">
+                  <div class="">
+                    <h1 class="pt-2">MARSANA</h1>
+                  </div>
+                  <a
+                    ><img
+                      src="./images/affiliate-icon-01.png"
+                      class="real_state_image-icon ms-4"
+                      style="width: 95px; height: 80px"
+                  /></a>
+                </div>
+                <p class="text-justify">
+                  Marsana Rent a Car was founded in 2007 with the goal of
+                  providing exceptional and efficient transportation services to
+                  meet the needs of businesses. We offer a wide range of car
+                  rental options, including well-known car brands and the latest
+                  models, from economical vehicles to trucks, as well as the
+                  option for cross-border rentals. Our commitment is to provide
+                  superior service and build long-term relationships with our
+                  clients. We are dedicated to providing a unique and fast
+                  service that exceeds expectations, and we strive to be a
+                  leading provider of transportation solutions for businesses.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Two column: Fluid image right, contained text left -->
+      <div
+        class="container-fluid position-relative affiliate-half-fluid affiliate-second-container"
+        style="height: 430px !important"
+      >
+        <div class="container-fluid">
+          <div class="row">
+            <!-- Image -->
+            <div
+              class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 position-lg-absolute affiliate-right-half h-100"
+            >
+              <div class="affiliate-image-2"></div>
+            </div>
+
+            <!-- Text -->
+            <div
+              class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 py-5 pe-lg-5 affiliate-content-col"
+            >
+              <div class="affiliate-top-content">
+                <div class="d-flex align-items-center pb-2">
+                  <div class="">
+                    <h1>SERVICE EQUIPMENT</h1>
+                  </div>
+                  <a
+                    ><img
+                      src="./images/affiliate-icon-02.png"
+                      class="real_state_image-icon ms-4"
+                      style="width: 70px; height: 70px"
+                  /></a>
+                </div>
+                <p class="text-justify">
+                  Balubaid is a leading name for Kingdom-wide sales and after
+                  sales service for industrial and service (workshop) equipment,
+                  including fuel dispensers, lifts, automated car wash
+                  equipment, tools, etc. Operating out of four main branches
+                  across the Kingdom, for over 30 years Balubaid Industrial and
+                  Service Equipment has been a partner of choice for
+                  international brands from Europe, the United States, and Asia.
+                  Balubaid is an agent for over 30 brands of equipment, 12 of
+                  which are exclusively represented by Balubaid in Saudi Arabia.
+                  Our product range includes: Fuel dispensers, Gas Station
+                  Equipment, Workshop Lifts, Scissor Lifts, Automated Car Wash
+                  Systems.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="container-fluid position-relative affiliate-half-fluid affiliate-third-container"
+        style="height: 430px !important"
+      >
+        <div class="container-fluid">
+          <div class="row">
+            <!-- Image -->
+            <div
+              class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 position-lg-absolute affiliate-left-half h-100"
+            >
+              <div class="affiliate-image-3"></div>
+            </div>
+
+            <!-- Text -->
+            <div
+              class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 offset-lg-6 py-5 ps-lg-5 affiliate-content-col"
+            >
+              <div class="affiliate-top-content">
+                <div class="d-flex align-items-center pb-2">
+                  <div class="">
+                    <h1>LUXURY CARTS</h1>
+                  </div>
+                  <a
+                    ><img
+                      src="./images/affiliate-icon-03.png"
+                      class="real_state_image-icon ms-4"
+                      style="width: 70px; height: 70px"
+                  /></a>
+                </div>
+                <p class="text-justify">
+                  LUXURY CARTS was established primarily for creating a new
+                  niche thru identification of new opportunities and market for
+                  world renowned and premier golf carts, commercial and
+                  industrial utility vehicles, parts and accessories. LUXURY
+                  CARTS is Saudi Arabia’s authorized distributor for premium UTV
+                  brands E-Z-GO, Garia, Cushman, Jacobsen, Ransomes, Textron Off
+                  Road, Mini Hummer and Motrec Industrial vehicles, among
+                  others, and Lead Crystal & Trojan long-lasting deep-cycle
+                  batteries. “LUXURY CARTS is the only UTV transport solutions
+                  company in the Kingdom of Saudi Arabia to have been ISO 9001
+                  Cerified.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer-section page-footer">
+      <div class="container">
+        <div class="row d-flex align-items-center">
+          <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+            <div class="phone-num text-light">
+              <span style="color: #ad713d">T</span>: +966 12 6404444
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <ul class="ps-0 mb-0">
+              <li>
+                <img
+                  src="./images/facebook.png"
+                  width="30px"
+                  height="30px"
+                  style="width: 30px"
+                />
+              </li>
+              <li>
+                <img
+                  src="./images/twitter.png"
+                  width="30px"
+                  height="30px"
+                  style="width: 30px"
+                />
+              </li>
+              <li>
+                <img
+                  src="./images/linkdin.png"
+                  width="30px"
+                  height="30px"
+                  style="width: 30px"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+            <div class="email-address text-light">
+              <span style="color: #ad713d">M</span>: info@balubaid.com
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

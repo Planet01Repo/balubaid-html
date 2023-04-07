@@ -1,0 +1,508 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      .font-weight-bolder {
+        font-weight: bolder !important;
+        font-family: 'Dax_regular', sans-serif;
+      }
+      .slogan-left-bar,
+      .slogan-right-bar {
+        height: 2px;
+        /* background: rgb(225,230,77); */
+        background: linear-gradient(
+          90deg,
+          rgb(173 113 61) 0%,
+          rgb(201 186 99) 20%,
+          rgb(173 113 61) 50%,
+          rgb(205 190 103) 80%,
+          rgb(173 114 61) 100%
+        );
+        width: 20%;
+        display: inline-block;
+        margin: 8px 26px;
+      }
+      .slogan-text {
+        font-size: 26px;
+      }
+      .page-footer {
+        display: flex;
+        align-items: center;
+      }
+
+      .page-footer ul {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .page-footer ul li {
+        display: inline-block;
+        margin-right: 15px;
+      }
+
+      .footer-section {
+        background-color: #003463 !important;
+        height: 90px;
+      }
+      @font-face {
+        font-family: 'Bahij_font';
+        src: url('./assets/fonts/Bahij_TheSansArabic-Bold.ttf');
+      }
+
+      @font-face {
+        font-family: 'Dax_light';
+        src: url('./assets/fonts/Dax-Light.otf');
+      }
+
+      @font-face {
+        font-family: 'Dax_regular';
+        src: url('./assets/fonts/Dax\ Regular.ttf');
+      }
+
+      @font-face {
+        font-family: 'Dax_medium';
+        src: url('./assets/fonts/Dax-Medium.otf');
+      }
+
+      @font-face {
+        font-family: 'Lexend_light';
+        src: url('./assets/fonts/Lexend-Light.ttf');
+      }
+
+      @font-face {
+        font-family: 'Lexend_bold';
+        src: url('./assets/fonts/Lexend-Bold.ttf');
+      }
+
+      a {
+        text-decoration: none !important;
+        color: #003463 !important;
+      }
+
+      .custom-nav {
+        background-color: #fff !important;
+      }
+
+      .custom-nav-link {
+        color: #ad713d !important;
+        padding-top: 25px;
+        margin-left: 20px;
+      }
+
+      .logo-image {
+        margin-left: 20px;
+      }
+
+      @media (min-width: 992px) and (max-width: 1920px) {
+        #navbarSupportedContent {
+          display: flex !important;
+          justify-content: space-around !important;
+        }
+      }
+
+      .consultancy_ban_sec {
+        width: 100%;
+      }
+
+      .consultancy_ban_img {
+        width: 100%;
+        position: relative;
+      }
+
+      .consultancy_ban_img img {
+        width: 100%;
+        height: 600px;
+      }
+
+      .consultancy_ban_text {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        -ms-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+
+      .consultancy_ban_text h1 {
+        font-size: 60px !important;
+        font-weight: 500;
+        color: #fff;
+        font-family: 'Dax_medium', sans-serif;
+        text-align: center;
+        color: #003463;
+        letter-spacing: 2px;
+      }
+
+      .consultancy_image_icon {
+        margin-right: 20px;
+      }
+
+      @media only screen and (max-width: 756px) {
+        .consultancy_ban_text h1 {
+          font-size: 40px !important;
+        }
+        .consultancy_icon {
+          width: 60px !important;
+          height: 60px !important;
+        }
+      }
+
+      .consultancy_section {
+        margin-top: 5rem;
+      }
+
+      .consultancy-half-fluid .consultancy-left-half,
+      .consultancy-half-fluid .consultancy-right-half {
+        left: 50%;
+        margin-left: -50vw;
+        max-width: 100vw;
+        position: relative;
+        right: 50%;
+        width: 100vw;
+        padding: 0px;
+      }
+
+      .consultancy-half-fluid .consultancy-image-1 {
+        background-image: url('./images/consultancy-image-1.jpg');
+        background-size: cover;
+        background-position: center;
+        /* min-height: 400px; */
+        height: 100%;
+      }
+
+      .consultancy-half-fluid .consultancy-image-2 {
+        background-image: url('./images/consultancy-image-2.jpg');
+        background-size: cover;
+        background-position: center;
+        /* min-height: 400px; */
+        height: 100%;
+      }
+
+      @media (min-width: 992px) {
+        .consultancy-half-fluid .consultancy-left-half {
+          padding-left: 0 !important;
+          position: absolute;
+          left: 0;
+          right: 50%;
+          margin-left: auto;
+          width: auto;
+        }
+        .consultancy-half-fluid .consultancy-right-half {
+          padding-right: 0 !important;
+          position: absolute;
+          right: 0;
+          left: 50%;
+          margin-left: auto;
+          width: auto;
+        }
+      }
+
+      @media only screen and (max-width: 992px) and (min-width: 375px) {
+        .consultancy-image-1,
+        .consultancy-image-2 {
+          min-height: 400px;
+        }
+      }
+
+      .consultancy-second-container .consultancy-content-col,
+      .consultancy-third-container .consultancy-content-col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+      }
+
+      .consultancy-first-container .consultancy-content-col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .consultancy-top-content {
+        width: 600px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .consultancy-top-content p {
+        font-size: 16px;
+        line-height: 1.5em;
+        letter-spacing: 1px;
+        font-family: 'Lexend_light', sans-serif;
+        text-align: justify;
+      }
+
+      .consultancy-top-content h1 {
+        letter-spacing: 2px;
+        /* padding-bottom: 5px; */
+        margin: 0;
+        font-size: 42px;
+        color: #003463;
+        font-family: 'Dax_medium', sans-serif;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light custom-nav pb-3">
+      <div class="container-fluid nav-bar">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link active custom-nav-link"
+                aria-current="page"
+                href="index.html"
+                style="color: white !important"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active custom-nav-link"
+                aria-current="page"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="about-us.html"
+                >About Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="#">Business Sectors</a>
+            </li>
+            <li>
+              <a class="navbar-brand" href="index.html">
+                <img
+                  src="./images/logo.png"
+                  alt=""
+                  width="100px"
+                  height="80px"
+                  class="logo-image"
+                  style="width: 100px !important; height: 80px !important"
+                />
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="#">News & Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="#">Careers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="#">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link custom-nav-link"
+                href="#"
+                style="
+                  color: #003463 !important ;
+                  font-family: 'Bahij_font', 'sans-serif';
+                "
+                >العربية</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="consultancy_ban_sec">
+      <div class="container-fluid p-0">
+        <div class="consultancy_ban_img">
+          <img src="images/consultancy-banner.jpg" alt="banner" />
+        </div>
+      </div>
+    </section>
+
+    <div class="container-fluid mt-5">
+      <div class="row">
+        <div class="col-12 text-center my-4">
+          <div class="slogan-left-bar"></div>
+          <!-- <p class="d-inline-block slogan-text">Balubaid Group</p> -->
+          <h1 class="about-main-heading d-inline-block text-left">
+            <span class="font-weight-bolder">Consultancy</span>
+          </h1>
+          <div class="slogan-right-bar"></div>
+        </div>
+      </div>
+    </div>
+    <section class="consultancy_section mb-5">
+      <!-- Two column: Fluid image left, contained text right -->
+      <div
+        class="container-fluid position-relative consultancy-half-fluid consultancy-first-container"
+        style="height: 580px !important"
+      >
+        <div class="container-fluid">
+          <div class="row">
+            <!-- Image -->
+            <div
+              class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 position-lg-absolute consultancy-left-half h-100"
+            >
+              <div class="consultancy-image-1"></div>
+            </div>
+
+            <!-- Text -->
+            <div
+              class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 offset-lg-6 py-3 ps-lg-5 consultancy-content-col"
+            >
+              <div class="consultancy-top-content">
+                <div class="d-flex align-items-center pb-2">
+                  <div class="">
+                    <h1>CORE3 CONSULTANCY</h1>
+                  </div>
+                  <a
+                    ><img
+                      src="./images/consultancy-logo.png"
+                      class="real_state_image-icon ms-4"
+                      style="width: 70px; height: 70px"
+                  /></a>
+                </div>
+                <p class="text-justify">
+                  Intensity. Drive. Determination. Pushing past the hardest of
+                  challenges. Getting better and better. CORE 3 was forged from
+                  this mindset. It’s this passion that makes us successful, and
+                  it’s this same passion we pour into our clients and their
+                  marketing, human resources, and information technology
+                  solutions. CORE 3 is a full-service advisory firm that has the
+                  strategic thinking, planning, creativity, and results of a
+                  larger consulting firm without the alarming price tags. We are
+                  a group of professional veterans that have worked for large
+                  blue-chip brands and local establishments - solving problems
+                  and conveying business success through our custom, tailored
+                  approach to each individual client’s needs - not a
+                  one-size-fits-all solution! CORE 3 Advisory started in 2010
+                  but was established as a full-time advisory in 2015. Since
+                  then, we have had great opportunities to partner with large
+                  global entities, as well as lead our own teams on the majority
+                  of projects. This modular business model has worked well for
+                  us and keeps us efficient and nimble
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Two column: Fluid image right, contained text left -->
+      <div
+        class="container-fluid position-relative consultancy-half-fluid consultancy-second-container"
+        style="height: 580px !important"
+      >
+        <div class="container-fluid">
+          <div class="row">
+            <!-- Image -->
+            <div
+              class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 position-lg-absolute consultancy-right-half h-100"
+            >
+              <div class="consultancy-image-2"></div>
+            </div>
+
+            <!-- Text -->
+            <div
+              class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 py-3 pe-lg-5 consultancy-content-col"
+            >
+              <div class="consultancy-top-content">
+                <p class="text-justify">
+                  Our advisory services include; Strategic Planning, Corporate
+                  Governance, Marketing, Human Resources, and Information
+                  technology - We are committed to delivering results to our
+                  clientele. Strategic planning expertise and versatile
+                  knowledge in various industries across the GCC, Levant, and
+                  North Africa. Complimented with corporate governance that
+                  allows us to define the best corporate and ownership practices
+                  for our partners. Being brand-focused, strategy-driven and
+                  design-led marketing advisors committed to the principles of
+                  creative excellence and delivering bottom-line positive
+                  results on marketing investments across most business sectors
+                  be it B2C or B2B. We have the ability to align the diversified
+                  and intricate HR needs of our clients by providing reliable
+                  and strategic staffing solutions. By understanding the
+                  significance of aligning talent strategy with business
+                  strategy we tend to offer workforce solutions that drive
+                  businesses forward in Advisory services, Executive Search,
+                  Learning & Development, and Outsourcing
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer-section page-footer">
+      <div class="container">
+        <div class="row d-flex align-items-center">
+          <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+            <div class="phone-num text-light">
+              <span style="color: #ad713d">T</span>: +966 12 6404444
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <ul class="ps-0 mb-0">
+              <li>
+                <img
+                  src="./images/facebook.png"
+                  width="30px"
+                  height="30px"
+                  style="width: 30px"
+                />
+              </li>
+              <li>
+                <img
+                  src="./images/twitter.png"
+                  width="30px"
+                  height="30px"
+                  style="width: 30px"
+                />
+              </li>
+              <li>
+                <img
+                  src="./images/linkdin.png"
+                  width="30px"
+                  height="30px"
+                  style="width: 30px"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+            <div class="email-address text-light">
+              <span style="color: #ad713d">M</span>: info@balubaid.com
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
