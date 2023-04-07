@@ -263,6 +263,15 @@
         padding-bottom: 5px;
         font-family: 'Dax_medium', sans-serif;
       }
+      .dropdown-menu.show {
+        border-radius: 0px;
+      }
+      a.dropdown-item {
+        color: white;
+      }
+      .dropdown-menu {
+        background: #003463;
+      }
     </style>
   </head>
 
@@ -304,8 +313,30 @@
                 >About Us</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link custom-nav-link" href="#">Business Sectors</a>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link custom-nav-link dropdown-toggle"
+                href="#"
+                data-toggle="dropdown"
+                aria-expanded="false"
+                >Business Sectors</a
+              >
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="automotive.html">Automotive</a>
+                <a class="dropdown-item" href="Manufacturing.html"
+                  >Manufacturing</a
+                >
+                <a class="dropdown-item" href="real_state.html">Real Estate</a>
+                <a class="dropdown-item" href="finance.html">Finance</a>
+                <a class="dropdown-item" href="Enterntainment.html"
+                  >Enterntainment</a
+                >
+                <a class="dropdown-item" href="consultancy.html">Consultancy</a>
+                <a class="dropdown-item" href="FITOUT_FURNISHING.html"
+                  >Fitout & Furnishing</a
+                >
+                <a class="dropdown-item" href="affiliates.html">Affiliates</a>
+              </div>
             </li>
             <li>
               <a class="navbar-brand" href="index.html">
