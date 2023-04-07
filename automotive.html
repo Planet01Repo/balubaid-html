@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   
+    <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <link rel="shortcut icon" href="images/favicon.ico">
+   <title>Balubaid</title>
+  
+
+
+<!-- Favicon Icon -->
+<link rel="shortcut icon" href="images/favicon.ico">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- Custom Scrollbar CSS-->
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+<!-- LOADING FONTS AND ICONS -->
+<link rel="stylesheet" type="text/css" href="rev/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+<link rel="stylesheet" type="text/css" href="rev/fonts/font-awesome/css/font-awesome.css">
+<!-- REVOLUTION STYLE SHEETS -->
+<link rel="stylesheet" type="text/css" href="rev/css/rs6.css">
+<!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+<!-- Progressbar CSS -->
+<link rel="stylesheet" href="css/progressbar.css">
+<!-- Animation CSS -->
+<link rel="stylesheet" href="css/animations.min.css">
+<!-- Magnefic Popup CSS -->
+<link rel="stylesheet" href="css/magnific-popup.min.css">
+<!-- Icons CSS -->
+<link rel="stylesheet" href="fonts/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="fonts/flaticon/flaticon.css">
+<link rel="stylesheet" href="css/ionicons.min.css">
+<link rel="stylesheet" href="fonts/themify-icons/themify-icons.css">
+<!--  Style CSS -->
+<link rel="stylesheet" href="css/style.css">
+<!--  Responsive CSS -->
+<link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+      @font-face {
+            font-family: 'Bahij_font';
+            src: url('./assets/fonts/Bahij_TheSansArabic-Bold.ttf');
+        }
+        @font-face {
+            font-family: 'Dax_light';
+            src: url('./assets/fonts/Dax-Light.otf');
+        }
+        @font-face {
+            font-family: 'Dax_regular';
+            src: url('./assets/fonts/Dax\ Regular.ttf');
+        }
+        @font-face {
+            font-family: 'Dax_medium';
+            src: url('./assets/fonts/Dax-Medium.otf');
+        }
+        @font-face {
+            font-family: 'Lexend_light';
+            src: url('./assets/fonts/Lexend-Light.ttf');
+        }
+        @font-face {
+            font-family: 'Lexend_bold';
+            src: url('./assets/fonts/Lexend-Bold.ttf');
+        }
+         
+          section{
+            padding: unset!important;
+         }
+      
+        .custom-heading{
+            margin-bottom: 25px !important;
+        }
+        .custom-para1{
+            color: rgba(114, 112, 112, 0.781);
+            font-size: 17px;
+         text-align: justify;
+         font-family: 'Lexend_light' , sans-serif !important;
+        }
+        .about-us-img{
+            text-align: unset !important;
+        }
+        .pq-image2{
+            left: unset !important;
+            right: 0 !important;
+            width: 60% !important;
+        }
+        .about-us{
+            position: relative;
+        }
+        .custom-cards{
+            height: 430px;
+        }
+        .btn-link{
+            text-decoration: none;
+            font-weight: 600;
+            color: #003463 !important;
+            font-family:  'Lexend_light' , sans-serif !important;
+
+        }
+        .pq-button.pq-button-link .pq-button-text{
+         color: unset !important;
+        }
+        .custom-height{
+            height: 32vh; 
+        }
+        .content-spacing{
+         padding-top: 50px !important;
+         height: 700px;
+        }
+        .autozone{
+         height: 580px;
+        }
+        .autozone1{
+         height: 580px;
+        }
+        .autozone2{
+         height: 580px;
+        }
+        .autozone3{
+         height: 580px;
+        }
+        .auto-heading{
+         padding-top: 55px;
+         text-align: center;
+        }
+        .heading-att{
+         font-size: 55px;
+         font-family: 'Dax_medium', sans-serif !important;
+         color: #003463 !important;
+        }
+        .auto-list{
+         margin: 0;
+         padding-left: 0;
+        }
+       .automotive-para{
+         font-size: 16px !important;
+         font-family: 'Lexend_light' , sans-serif !important;
+       }
+       .auto-list li span{
+         font-family:  'Lexend_light' , sans-serif !important;
+         font-size: 16px;
+       }
+
+      .auto_motive_ban_sec {
+            width: 100%;
+        }
+        
+        .auto_motive_ban_img {
+            width: 100%;
+            position: relative;
+        }
+        
+        .auto_motive_ban_img img {
+            width: 100%;
+            height: 600px;
+        }
+        
+        .auto_motive_ban_text {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            -ms-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+        
+        .auto_motive_ban_text h1 {
+            font-size: 60px !important;
+            font-weight: 500;
+            color: #fff;
+            font-family: 'Dax_medium', sans-serif;
+            text-align: center;
+            color: #003463;
+            letter-spacing: 2px;
+        }
+        
+        .auto_motive_image-icon {
+            margin-right: 20px;
+        }
+        
+        @media only screen and (max-width: 756px) {
+            .auto_motive_ban_text h1 {
+                font-size: 40px !important;
+            }
+            .auto_motive_image-icon {
+                width: 60px !important;
+                height: 60px !important;
+            }
+        }
+        
+        .content-text p {
+            color: #003463;
+            font-size: 20px;
+            line-height: 1.6em;
+            font-family: 'Lexend_bold', sans-serif;
+            font-weight: 500;
+            width: 85%;
+        }
+        
+        .auto-half-fluid .auto-left-half,
+        .auto-half-fluid .right-half {
+            left: 50%;
+            margin-left: -50vw;
+            max-width: 100vw;
+            position: relative;
+            right: 50%;
+            width: 100vw;
+            padding: 0px;
+        }
+        
+        .auto-half-fluid .image1 {
+            background-image: url("./images/balu/autozone-interior.jpg");
+            background-size: cover;
+            background-position: center;
+            /* min-height: 400px; */
+            height: 100%;
+        }
+        
+        .auto-half-fluid .image2 {
+            background-image: url("./images/balu/spareparts-560x338.jpg");
+            background-size: cover;
+            background-position: center;
+            /* min-height: 400px; */
+            height: 100%;
+        }
+        
+        .auto-half-fluid .image3 {
+            background-image: url("./images/balu/transportation-560x338.jpg");
+            background-size: cover;
+            background-position: center;
+            /* min-height: 400px; */
+            height: 100%;
+        }
+        .auto-half-fluid .image4 {
+            background-image: url("./images/balu/service.jpg");
+            background-size: cover;
+            background-position: center;
+            /* min-height: 400px; */
+            height: 100%;
+        }
+        
+        @media (min-width: 992px) {
+            .auto-half-fluid .auto-left-half {
+                padding-left: 0 !important;
+                position: absolute;
+                left: 0;
+                right: 50%;
+                margin-left: auto;
+                width: auto;
+            }
+            .auto-half-fluid .right-half {
+                padding-right: 0 !important;
+                position: absolute;
+                right: 0;
+                left: 50%;
+                margin-left: auto;
+                width: auto;
+            }
+        }
+        
+        @media only screen and (max-width: 992px) and (min-width: 375px) {
+            .image1,
+            .image2,
+            .image3 {
+                min-height: 400px;
+            }
+        }
+        
+        .second-container .content-col,
+        .third-container .content-col {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        
+        .auto-first-container .content-col {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .auto-top-content {
+            /* width: 600px; */
+            margin-right: auto;
+            margin-left: auto;
+        }
+        
+        .auto-top-content p {
+            font-size: 14px;
+            line-height: 1.5em;
+            letter-spacing: 1px;
+            font-family: 'Lexend_light', sans-serif;
+        }
+        
+        .auto-top-content h1 {
+            letter-spacing: 2px;
+            padding-bottom: 15px;
+            font-size: 42px;
+            color: #003463;
+            font-family: 'Lexend_bold', sans-serif;
+            font-weight: 500;
+        }
+        .custom-nav .custom-nav-link {
+        font-family: 'Dax_medium', sans-serif;
+      }
+
+      @media (min-width: 992px) and (max-width: 2590px) {
+        #navbarSupportedContent {
+          display: flex !important;
+          justify-content: space-around !important;
+        }
+      }
+
+      a {
+        text-decoration: none !important;
+        /* color: #003463 !important; */
+      }
+
+      .custom-nav {
+        background-color: #fff !important;
+      }
+
+      .custom-nav-link {
+        color: #ad713d !important;
+        padding-top: 25px;
+        margin-left: 10px;
+        margin-right: 10px;
+        /* margin-left: 20px; */
+      }
+
+      .logo-image {
+        /* margin-left: auto;
+            margin-right: auto; */
+        margin-left: 25px;
+      }
+      .page-footer {
+        display: flex;
+        align-items: center;
+      }
+
+      .page-footer ul {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .page-footer ul li {
+        display: inline-block;
+        margin-right: 15px;
+      }
+
+      .footer-section {
+        background-color: #003463 !important;
+        height: 90px;
+      }
+      .font-weight-bolder {
+    font-weight: bolder!important;
+    font-family: 'Dax_regular', sans-serif;
+  }
+  .slogan-left-bar,.slogan-right-bar{
+      height: 2px;
+      /* background: rgb(225,230,77); */
+      background: linear-gradient(90deg, rgb(173 113 61) 0%, rgb(201 186 99) 20%, rgb(173 113 61) 50%, rgb(205 190 103) 80%, rgb(173 114 61) 100%);
+      width: 20%;
+      display: inline-block;
+      margin: 8px 26px;
+  
+  }
+  .slogan-text{
+      font-size: 26px;
+  }
+  .col-12.text-center.my-4 {
+    margin-top: 45px !important;
+}
+    </style>
+    <title>Balubaid</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light custom-nav pb-3">
+        <div class="container-fluid nav-bar">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active custom-nav-link" aria-current="page" href="index.html" style="color: white !important;">Home</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active custom-nav-link"
+                  aria-current="page"
+                  href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link custom-nav-link" href="about-us.html"
+                  >About Us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link custom-nav-link" href="#">Business Sectors</a>
+              </li>
+              <li>
+                <a class="navbar-brand" href="index.html">
+                  <img
+                    src="./images/logo.png"
+                    alt=""
+                    width="100px"
+                    height="80px"
+                    class="logo-image"
+                    style="width: 100px !important;
+                    height: 80px !important;"
+                  />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link custom-nav-link" href="#">News & Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link custom-nav-link" href="#">Careers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link custom-nav-link" href="#">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link custom-nav-link"
+                  href="#"
+                  style="
+                    color: #003463 !important ;
+                    font-family: 'Bahij_font', 'sans-serif';
+                  "
+                  >العربية</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-center my-4">
+                <div class="slogan-left-bar"></div>
+                <!-- <p class="d-inline-block slogan-text">Balubaid Group</p> -->
+                <h1 class="about-main-heading d-inline-block text-left">
+                  <span class="font-weight-bolder">Automotive</span>
+                </h1>
+                <div class="slogan-right-bar"></div>
+              </div>
+        </div>
+      </div>
+
+
+      <section>
+  <!--=================================
+         about-us start-->
+         <section class="about-us">
+            <div class="content-spacing">
+               <div class="container">
+               <div class="row">
+                  <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div class="about-us-img">
+                        <img src="images/balu/image-car.png" class="img-fluid pq-image1 wow fadeInLeft" alt="home" >
+                        <img src="images/balu/car-logos.png" class="img-fluid pq-image2 wow fadeInLeft" alt="home" >   
+                    </div>
+                </div>
+                  <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 px-xl-4 mt-4 mt-xl-0">
+                     <div class="pq-section pq-style-1 text-left"> <span class="pq-section-sub-title btn-link">What About Us</span>
+                        <h5 class="pq-section-title  custom-heading heading-att">Balubaid Automotive</h5>
+                        <p class="pq-section-description custom-para">Balubaid has over 65 years of automotive history, including over five decades as an agent or exclusive distributor for brands including Chevrolet, GMC, Cadillac, Buick, Opel, Pontiac, Subaru, Daihatsu, and Peugeot.
+                            <br>
+                           <p class="custom-para1">During this time, Balubaid has been among the largest independent General Motors dealers in the world, as well as one of the leading dealers of Peugeot vehicles in the region. In its last decade as a General Motors agent, Balubaid was the fastest growing dealer in Saudi Arabia.</p> 
+                        </p>
+                     </div>
+                     <div class="row mt-3">
+                        <div class="col-lg-6 col-md-6">
+                           <ul class="pq-list-check auto-list">
+                              <li ><i aria-hidden="true" class="ion ion-checkmark-round"></i><span >Autozone</span></li>
+                              <li><i aria-hidden="true" class="ion ion-checkmark-round"></i><span>Spare Parts</span></li>
+                              <li><i aria-hidden="true" class="ion ion-checkmark-round"></i><span>Client Satisfaction</span></li>
+                           </ul>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                           <ul class="pq-list-check auto-list">
+                              <li><i aria-hidden="true" class="ion ion-checkmark-round"></i><span>Transportation</span></li>
+                              <li><i aria-hidden="true" class="ion ion-checkmark-round"></i><span>Service Equipment</span></li>
+                              <li><i aria-hidden="true" class="ion ion-checkmark-round"></i><span>Patient Experience</span></li>
+                           </ul>
+                        </div>
+                        <div class="col-lg-6 col-md-6 mt-md-5">
+                            <!-- <div class="pq-contact-box1">
+                               <h4 class="pq-contact-title">+1 (212) 255-5511</h4>
+                               <p class="pq-contact-desciption pq-text-primary mb-0">Do you have any question?</p>
+                            </div> -->
+                         </div>
+                        <!-- <div class="col-lg-6 col-md-6 mt-md-5"> <img src="images/sign.png" class="img-fluid pq-signimg" alt="home"> </div> -->
+                     </div>
+                     <!-- <div class="col-lg-12 ">
+                        <a class="pq-button pq-button-flat mt-3" href="about-us.html">
+                           <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i class="ion ion-plus-round"></i> </div>
+                        </a>
+                     </div> -->
+                  </div>
+               </div>
+            </div>
+            </div>
+         </section>
+   <!--=================================
+         about-us end-->
+
+                                                                <!-- our services -->
+
+         <section class="service pq-bg-grey content-spacing">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-12">
+                     <div class="col-lg-12">
+                        <div class="pq-section pq-style-1 text-center"> <span class="pq-section-sub-title btn-link">OUR SERVICES</span>
+                           <h5 class="pq-section-title heading-att">Explore Our Main Service</h5> </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-md-6 mt-xl-0 mt-md-0 mt-4 ">
+                     <div class="pq-fancy-box pq-style-3 custom-cards">
+                        <div class="pq-fancy-box-hoverbg"> <img src="images/balu/autozone-interior.jpg" class="img-fluid" alt="Images"> </div>
+                        <!-- <div class="pq-fancy-box-icon"> <i class=" flaticon-heartbeat"></i> </div> -->
+                        <div class="pq-fancy-box-info left">
+                           <div class="custom-height">
+                            <h5 class="pq-fancy-box-title auto-head">Autozone</h5>
+                            <p class="pq-fancybox-description automotive-para">Autozone is a unique automotive retail concept based on a value proposition of choice, value, and customer centricity for Saudi Arabian car buyers.</p></div>
+                           <a class="pq-button pq-button-link" href="#auto">
+                              <div class="pq-button-block btn-link"><span class="pq-button-text">Read More</span> <i class="ion ion-plus-round"></i></div>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-md-6 mt-xl-0 mt-md-0 mt-4">
+                     <div class="pq-fancy-box pq-style-3 custom-cards">
+                        <div class="pq-fancy-box-hoverbg"> <img src="images/balu/spareparts-560x338.jpg" class="img-fluid" alt="Images"> </div>
+                        <!-- <div class="pq-fancy-box-icon"><i class=" flaticon-first-aid-box"></i></div> -->
+                        <div class="pq-fancy-box-info left">
+                           <div class="custom-height">
+                           <h5 class="pq-fancy-box-title auto-head">Spare Parts</h5>
+                           <p class="pq-fancybox-description automotive-para">Historically known as the “king of parts,” Balubaid is a leading distributor of auto parts in the Kingdom, and is especially renowned for its distribution of genuine General Motors parts.</p>
+                           </div>
+                           <a class="pq-button pq-button-link" href="#spare">
+                              <div class="pq-button-block btn-link"> <span class="pq-button-text">Read More</span> <i class="ion ion-plus-round"></i> </div>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-md-6 mt-xl-0 mt-md-0 mt-4 ">
+                     <div class="pq-fancy-box pq-style-3 custom-cards">
+                        <div class="pq-fancy-box-hoverbg"> <img src="images/balu/transportation-560x338.jpg" class="img-fluid" alt="Images"> </div>
+                        <!-- <div class="pq-fancy-box-icon"> <i class="flaticon-healthcare"></i> </div> -->
+                        <div class="pq-fancy-box-info left">
+                            <div class="custom-height">
+                           <h5 class="pq-fancy-box-title auto-head">Transportation</h5>
+                           <p class="pq-fancybox-description automotive-para">Balubaid Transportation is a venture of Balubaid Group, which has a distinguished heritage spanning 60 years in the automotive business.</p>
+                            </div>
+                           <a class="pq-button pq-button-link" href="#transportation">
+                              <div class="pq-button-block btn-link"> <span class="pq-button-text">Read More</span> <i class="ion ion-plus-round"></i> </div>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-md-6 mt-xl-0 mt-md-0 mt-4 ">
+                     <div class="pq-fancy-box pq-style-3 custom-cards">
+                        <div class="pq-fancy-box-hoverbg"> <img src="images/balu/service.jpg" class="img-fluid" alt="Images"> </div>
+                        <!-- <div class="pq-fancy-box-icon"> <i class="  flaticon-ct-scan"></i> </div> -->
+                        <div class="pq-fancy-box-info left">
+                            <div class="custom-height">
+                           <h5 class="pq-fancy-box-title auto-head">Service Equipment</h5>
+                           <p class="pq-fancybox-description automotive-para">Balubaid is a leading name for Kingdom-wide sales and after sales service for industrial and service (workshop) equipment, including fuel dispensers, lifts, automated car wash equipment, tools, etc.</p>
+                            </div>
+                           <a class="pq-button pq-button-link" href="#Service">
+                              <div class="pq-button-block btn-link"> <span class="pq-button-text">Read More</span> <i class="ion ion-plus-round"></i> </div>
+                           </a>
+                        </div>
+                     </div>
+                  </div>                 
+               </div>
+            </div>
+         </section>
+
+
+                                                                                       
+
+  <div class="auto_motive">
+   
+
+         <section class=" mt-2 mb-5">
+            <!-- Two column: Fluid image left, contained text right -->
+            <div class="container-fluid position-relative auto-half-fluid auto-first-container" style="height:430px !important">
+                <div class="container-fluid">
+                    <div class="row">
+    
+                        <!-- Image -->
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 position-lg-absolute auto-left-half h-100">
+                            <div class="image1"></div>
+                        </div>
+    
+                        <!-- Text -->
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 offset-lg-6  ps-lg-5 content-col">
+                            <div class="auto-top-content">
+                                <h1 class="pt-2">Autozone</h1>
+    
+                                <p><span class="auto-auto-para">Autozone is a unique automotive retail concept based on a value proposition of choice, value, and customer centricity for Saudi Arabian car buyers.</span><br>
+                                 Building on its experience as a dealer and distributor of American, Japanese, and European vehicle brands, Balubaid in 2012 consolidated its Kingdom-wide vehicle retail network into a single, independent network of automotive retail superstores under the brand name “Autozone.” The large format of Autozone facilities, some of which can accommodate over 60 vehicles for display, allows consumers to see, touch, and experience most of the best-selling vehicles in the Kingdom under one roof. Organized into sedan, SUV and commercial zones and vehicle segments by size, Autozone makes comparison shopping easier and more pleasant than ever before. </p>
+                               
+                                 <strong>City:</strong> Jeddah
+                                 <br>
+                                 <strong>Email:</strong> Info@Autozone.Com
+                                 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Two column: Fluid image right, contained text left -->
+            <div class="container-fluid position-relative auto-half-fluid second-container" style="height:430px !important">
+                <div class="container-fluid">
+                    <div class="row">
+    
+                        <!-- Image -->
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 position-lg-absolute right-half h-100">
+                            <div class="image2"></div>
+                        </div>
+    
+                        <!-- Text -->
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12  pe-lg-5 content-col">
+                            <div class="auto-top-content">
+                                <h1>Spare Parts</h1>
+                                <p class="text-justify">Historically known as the “king of parts,” Balubaid is a leading distributor of auto parts in the Kingdom, and is especially renowned for its distribution of genuine General Motors parts.<br>
+                                 Balubaid is an authorized agent of AC Delco parts in the Kingdom of Saudi Arabia, and distributes a wide range of products to wholesale markets as well as through its own Kingdom-wide retail network. AC Delco provides high-quality parts for all major vehicle systems, as well as off-road, marine and industrial equipment. Our product portfolio includes maintenance parts, such as car batteries, spark plugs, oil filters, air filters, wiper blades, and brakes, as well as repair parts such as alternators, radiators, chassis and heating/cooling components. </p>
+                                 
+                                 <strong>City:</strong> Jeddah
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+    
+            <div class="container-fluid position-relative auto-half-fluid third-container" style="height:430px !important">
+                <div class="container-fluid">
+                    <div class="row">
+    
+                        <!-- Image -->
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 position-lg-absolute auto-left-half h-100">
+                            <div class="image3"></div>
+                        </div>
+    
+                        <!-- Text -->
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 offset-lg-6  ps-lg-5 content-col">
+                            <div class="auto-top-content">
+                                <h1>Transportation</h1>
+    
+                                <p>Balubaid Transportation is a venture of Balubaid Group, which has a distinguished heritage spanning 60 years in the automotive business.<br>
+                                 Today, the company is one of the leaders in the automotive transportation industry, serving successfully for more than 4 decades. We employ a large fleet of modern car carriers to meet all the needs of our customers (individuals – corporations – government agencies). </p>
+                                 
+                                 <strong>City:</strong> Jeddah
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+             <!-- Two column: Fluid image right, contained text left -->
+             <div class="container-fluid position-relative auto-half-fluid second-container" style="height:430px !important">
+               <div class="container-fluid">
+                   <div class="row">
+   
+                       <!-- Image -->
+                       <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 position-lg-absolute right-half h-100">
+                           <div class="image2"></div>
+                       </div>
+   
+                       <!-- Text -->
+                       <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12  pe-lg-5 content-col">
+                           <div class="auto-top-content">
+                               <h1>Service Equipment</h1>
+                               <p class="text-justify"><span class="auto-auto-para">Balubaid is a leading name for Kingdom-wide sales and after sales service for industrial and service (workshop) equipment, including fuel dispensers, lifts, automated car wash equipment, tools, etc.</span><br>
+                                 Operating out of four main branches across the Kingdom, for over 30 years Balubaid Industrial and Service Equipment has been a partner of choice for international brands from Europe, the United States, and Asia. Balubaid is an agent for over 30 brands of equipment, 12 of which are exclusively represented by Balubaid in Saudi Arabia. Our product range includes:<strong> Fuel dispensers, Gas Station Equipment, Workshop Lifts, Scissor Lifts, Automated Car Wash Systems </strong> </p>
+                                 
+                                 <strong>City:</strong> Jeddah
+                               </p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+   
+        </section>
+    
+
+
+      </div>
+
+      <section class="footer-section page-footer">
+        <div class="container">
+          <div class="row d-flex align-items-center">
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+              <div class="phone-num text-light">
+                <span style="color: #ad713d">T</span>: +966 12 6404444
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+              <ul class="ps-0 mb-0">
+                <li>
+                  <img src="./images/facebook.png" width="30px" height="30px" style="width: 30px;" />
+                </li>
+                <li>
+                  <img src="./images/twitter.png" width="30px" height="30px" style="width: 30px;" />
+                </li>
+                <li>
+                  <img src="./images/linkdin.png" width="30px" height="30px" style="width: 30px;" />
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+              <div class="email-address text-light">
+                <span style="color: #ad713d">M</span>: info@balubaid.com
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+            <!-- Optional JavaScript; choose one of the two! -->
+            
+            <!-- Option 1: Bootstrap Bundle with Popper -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+             <!-- Animation JS -->
+            <script src="js/wow.min.js "></script>
+
+            <script src="js/jquery.min.js"></script>
+            <!--bootstrap js-->
+            <script src="js/bootstrap.min.js"></script>
+            <!--Custom Scrollbar-->
+            <script src="js/jquery.mCustomScrollbar.min.js"></script>
+            <!--owl-carousal-->
+            <script src="js/owl.carousel.min.js"></script>
+            <!--progress-bar js-->
+            <script src="js/progressbar.js"></script>
+            <!--isotope js-->
+            <script src="js/isotope.pkgd.min.js"></script>
+            <!--countTo js-->
+            <script src="js/jquery.countTo.min.js"></script>
+            <!--Maginfic-Popup js-->
+            <script src="js/jquery.magnific-popup.min.js"></script>
+            <!-- Animation JS -->
+            <script src="js/wow.min.js"></script>
+            <!-- Rev-Slider -->
+            <script src="rev/js/rbtools.min.js"></script>
+            <script src="rev/js/rs6.min.js"></script>
+            <script src="js/rev-custom.js"></script>
+            <!--custom js-->
+            <script src="js/custom.js"></script>
+
+
+          
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
